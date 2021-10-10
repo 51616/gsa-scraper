@@ -1,0 +1,1540 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAABE0AA8AAAAAHWwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABWAAAADsAAABUIIslek9TLzIAAAGUAAAAQwAAAFY3d1HZY21hcAAAAdgAAACqAAACOvWLi0FjdnQgAAAChAAAABMAAAAgBtX/BGZwZ20AAAKYAAAFkAAAC3CKkZBZZ2FzcAAACCgAAAAIAAAACAAAABBnbHlmAAAIMAAABdQAAAjkYT9TNWhlYWQAAA4EAAAAMwAAADYQ6WvNaGhlYQAADjgAAAAfAAAAJAc6A1pobXR4AAAOWAAAACAAAAA0Kmz/7mxvY2EAAA54AAAAHAAAABwQPBJubWF4cAAADpQAAAAgAAAAIAEHC/NuYW1lAAAOtAAAAYQAAALxhQT4h3Bvc3QAABA4AAAAfgAAAMS3SYh9cHJlcAAAELgAAAB6AAAAhuVBK7x4nGNgZGBg4GIwYLBjYHJx8wlh4MtJLMljkGJgYYAAkDwymzEnMz2RgQPGA8qxgGkOIGaDiAIAJjsFSAB4nGNgZHZmnMDAysDAVMW0h4GBoQdCMz5gMGRkAooysDIzYAUBaa4pDA4Pwz+yMwf9z2KIYg5imAYUZgTJAQDcoQvQAHic7ZHNDYJAFIRnBXf94cDRIiyCKkCpwFCPJ092RcKNDoYKcN4+EmMPvpdvk539zQyAPYBCXEUJhBcCrJ5SQ9YLnLJe4qF5rdb+uWPDngNHTkta101pNyWa8lMhn6xx2dqUnW4q9YOIhAOOeueMSgsR/6ry+P7O5s6xVNg4chBsHUuFnWNJ8uZYwrw7chrsHXkODo7cB0dHOYCTY8kv0VE2WJKD6gOlWjsxAAB4nGNgQAMSEMgc9D8LhAESbAPdAHicrVZpd9NGFB15SZyELCULLWphxMRpsEYmbMGACUGyYyBdnK2VoIsUO+m+8Ynf4F/zZNpz6Dd+Wu8bLySQtOdwmpOjd+fN1czbZRJaktgL65GUmy/F1NYmjew8CemGTctRfCg7eyFlisnfBVEQrZbatx2HREQiULWusEQQ+x5ZmmR86FFGy7akV03KLT3pLlvjQb1V334aOsqxO6GkZjN0aD2yJVUYVaJIpj1S0qZlqPorSSu8v8LMV81QwohOImm8GcbQSN4bZ7TKaDW24yiKbLLcKFIkmuFBFHmU1RLn5IoJDMoHzZDyyqcR5cP8iKzYo5xWsEu20/y+L3mndzk/sV9vUbbkQB/Ijuzg7HQlX4RbW2HctJPtKFQRdtd3QmzZ7FT/Zo/ymkYDtysyvdCMYKl8hRArP6HM/iFZLZxP+ZJHo1qykRNB62VO7Es+gdbjiClxzRhZ0N3RCRHU/ZIzDPaYPh788d4plgsTAngcy3pHJZwIEylhczRJ2jByYCVliyqp9a6YOOV1WsRbwn7t2tGXzmjjUHdiPFsPHVs5UcnxaFKnmUyd2knNoykNopR0JnjMrwMoP6JJXm1jNYmVR9M4ZsaERCICLdxLU0EsO7GkKQTNoxm9uRumuXYtWqTJA/Xco/f05la4udNT2g70s0Z/VqdiOtgL0+lp5C/xadrlIkXp+ukZfkziQdYCMpEtNsOUgwdv/Q7Sy9eWHIXXBtju7fMrqH3WRPCkAfsb0B5P1SkJTIWYVYhWQGKta1mWydWsFqnI1HdDmla+rNMEinIcF8e+jHH9XzMzlpgSvt+J07MjLj1z7UsI0xx8m3U9mtepxXIBcWZ5TqdZlu/rNMfyA53mWZ7X6QhLW6ejLD/UaYHlRzodY3lBC5p038GQizDkAg6QMISlA0NYXoIhLBUMYbkIQ1gWYQjLJRjC8mMYwnIZhrC8rGXV1FNJ49qZWAZsQmBijh65zEXlaiq5VEK7aFRqQ54SbpVUFM+qf2WgXjzyhjmwFkiXyJpfMc6Vj0bl+NYVLW8aO1fAsepvH472OfFS1ouFPwX/1dZUJb1izcOTq/Abhp5sJ6o2qXh0TZfPVT26/l9UVFgL9BtIhVgoyrJscGcihI86nYZqoJVDzGzMPLTrdcuan8P9NzFCFlD9+DcUGgvcg05ZSVnt4KzV19uy3DuDcjgTLEkxN/P6VvgiI7PSfpFZyp6PfB5wBYxKZdhqA60VvNknMQ+Z3iTPBHFbUTZI2tjOBIkNHPOAefOdBCZh6qoN5E7hhg34BWFuwXknXKJ6oyyH7kXs8yik/Fun4kT2qGiMwLPZG2Gv70LKb3EMJDT5pX4MVBWhqRg1FdA0Um6oBl/G2bptQsYO9CMqdsOyrOLDxxb3lZJtGYR8pIjVo6Of1l6iTqrcfmYUl++dvgXBIDUxf3vfdHGQyrtayTJHbQNTtxqVU9eaQ+NVh+rmUfW94+wTOWuabronHnpf06rbwcVcLLD2bQ7SUiYX1PVhhQ2iy8WlUOplNEnvuAcYFhjQ71CKjf+r+th8nitVhdFxJN9O1LfR52AM/A/Yf0f1A9D3Y+hyDS7P95oTn2704WyZrqIX66foNzBrrblZugbc0HQD4iFHrY64yg18pwZxeqS5HOkh4GPdFeIBwCaAxeAT3bWM5lMAo/mMOT7A58xh0GQOgy3mMNhmzhrADnMY7DKHwR5zGHzBnHWAL5nDIGQOg4g5DJ4wJwB4yhwGXzGHwdfMYfANc+4DfMscBjFzGCTMYbCv6dYwzC1e0F2gtkFVoANTT1jcw+JQU2XI/o4Xhv29Qcz+wSCm/qjp9pD6Ey8M9WeDmPqLQUz9VdOdIfU3Xhjq7wYx9Q+DmPpMvxjLZQa/jHyXCgeUXWw+5++J9w/bxUC5AAEAAf//AA94nIVVX2hbZRQ/5/t7893s5ja9f7ouzdZ0TTqz3bRJmogbWya6bG6Cq0VbSV2ddIJjFtfIQHEig80Hda8yUN/0YQz8AyriiyD+xQd92R4HCnaCb3samnpumrpsCsLlfPf7zvedc37nL3CAtc/5W/wQZGA3tOBSY/g+TMjHmwzEoM1Q8+ZjRZY4oJhmBw5/YB6Za0yC5AkhlwA1A1yCBIBOwCII0Cj0U8BAMdUCzq05sKwkP7SlUY6fcJk4Fb/RyE79/6P5hjM/F4aZiXBoeMgzcqQ4Xi1hPqfDLG5FT+lchCVU3lYMyvuwhl1mqndQL0RsuloLywHtthLXI06OblTrhfWVnpSJ5+mwu/JdbtuN3IAnkW0LLMcRwaC7ktrlzridM6kVdyf9uO1UNBByI7JhwtG2sEwab07ORBeilWhqavJCqV0qzZTOl/7ZXQ5TbTcdcFelyGhhRDAQpdqp1FEX3w3cFTc1k9pJQkmm4ySCbSikxRP2QOfN+0tHS5MrpQuTU1Mk5nw0E5Xa0WvrOwDyGax9yB9ma6DAg82wHc43SAGTI4GjBWebOePAERFE8/AHaQpZASSTy8A4WwZiLQMQ82mFKATO0ILicRAoDm9p5P99E5b/fXG+kQYY3TYUuqmERWYoT0u/GNYL2q/4WB3LaVS+VynXsVYIcWw6DkCh3nX1D+VzlYN4LClF5yexSQos8exqZ3KVP+wtrC54u4Nznq6cq+xpMpUUnZ8FUYzE86ud0g28NOIv3Gj5/rmA3ABs7S/ywzFuQ4qyd6QxfNtiQIaEgp3w/entQg4Vcbqa16M5FfpeUB8t1+qeg7mI7cUyOe79wOk86gSxkVec4KPTX69++5x68Yubn5/F+w52z7u08sJX7fZXv8ekT/d2mILJxq6sn+SC6qEJknzLJCxyZEKwWVqYmAPBxBE/9DLeZiWHu7lcr/VytrCRuHojncNuTt9h46tmacmYisnSamdN2bZptcsmSysdVsy1PrOvOzF3xN64Rb937t/og9KHxYdcjIUqFAmIAHGHNzlns+RTPgeUYAQm9DwpNxfxbhhBHPaw3/gfTcXO2L+eJVIx5nsyGkvm9X4/f+bGkH45G0PaSjcMXTjcZyTvi3UdHoCDjQd3IDUVsgwYmUoJK/gp4JJxeRI0MKHZIkgynyIBqBTOUs6rOVCojvjZ4mCQz49ZMlMcp8QoYk6NoBfsxnJtsBohpa8iGJS+ZH7gU7NxME6cmF+t7cO9vB8d3jTWSct0ycW9ranXmolNDwmVkNnxe+8JtoztwS5rKJ0xWS95tQ/1zMYzg69MzUZnNtl1ofNbsml/OJm6f9wjRjpnu2o4MzHzn77IQkRd+1DjwMQ2pqSjGMMhyjrgTbBAKksuUm0iU7hI0aN2wOKOq7WYBSH0HGihj/jkiPxAfmwsEbfYrjMG+j3ij932Db/LV7I/xruNrhnroxjR9HRMb2nTvO0ZXOoHPk8H2ZhDPx93qcE/53sH5np/dkIP7zzhTVKdR/BAY/9ElkkR+A6lJGsqpJ4oQcTxpvBT3Kn58VkaJjgHyPEIws57xkaHh9KuVpDEpJZeMbZ5w/zBHi5NMQ4r5VphsFqID7TyB9eR4pX216c3AHxpdAwoqU9qg0ZJ6yVLKmMSz1iG2z27ifx18NkY0LPx1W/wCc2l5LrznrIsiKsqbmB78A9wIGx4tI8rjihVHJyY9pgMirenVq0yWg7Iw7eogG7ZgYM3qR9959A/fZkg6MnD/exlkmc+jWV4SB15XUR+eqC6l6ZmgPtN9z5JMfik05OV8ljylunJ4J+wA/FUaQSSKotsYsCWqaPBidBLcxkWx7XKFRIb45TGaEhjlF9uUVPqXOtcIwsXbBvfoZXIyRYFdkfnqjExH98xpnPczqzjX/uNdO1Y17Wpi5+6Ts8BXtjVFasp9KZ1mOiNbH65c5w6HgmyF2jFCZywM8mWjRc7T5Pmt0lRy7Y71+jYbpGyvwG4sH0XeJxjYGRgYADiwBB/53h+m68M3MwvgCIM1z5N/g6j///9v5H5BbMnkMvBwAQSBQCIcA9gAHicY2BkYGAO+p8FJF/8//v/F/MLBqAICuAFALYQB5kAeJxjfsHAwLwAiCNB+P9fbJjJmoGBMRUo/wKCAfO2EnQAAAAAANoBXgGcAgICVALaA1IDvAPkBAYEPARyAAEAAAANAF0ABAAAAAAAAgAUACQAcwAAAG4LcAAAAAB4nHWRzWrCQBSFT+pPqUIXLXTTzayKUohGKIibCoLuhbrrYtTRxCYZmYyKyz5Fd32HvlDfoO/QkziIFJtw9bvnnpl7ZwLgBt/wcHieGAf2UGd24Atcou+4RH3kuEweO66QXx1XyaHjGh6ROa7jFp/cwStfMVvhy7GHO+/e8QWuvcBxifqz4zL5xXGF/Oa4Sn53XMPE+3Bcx4P3M9DrvYmWoRWNQVN02kFXTPdCU4pSGQu5saE2meiLhU6timPtz3SSs9ypTCdqrJabWJoT5QQnymSRTkXgt0/UkUqVkVbN807ZdtmxdiEWRidi6HqItdErNbN+aO2612qd9sYAGmvsYRBhyUu0EGhQbfK/gzYCdElTOgSdB1eEFBIxFYkNV4RFJWPeZyyYpVQVHTHZx4y/yVGX2LGWFZri51TccUOn5B7nPefVCSPvGhVVwUl9znveO2KkhV8Wk82PZ8qwZf8OVcu1+fSmWCMw/HMOwXvKaysqM+p+cVuWag8tvv+c+xdd+4+teJxtjUEOwiAURJla24KliQfhUA2g/Sl+CKXx+loNrpzVezOLEY34Ron/0WhwQoszOvQYIKFwwQiNSbSBeO2SZ0tBP4j3zVjKNng32ZmtD1VVXCuOiw/pJ8S3WOU6l+K5UOTaDC4+2TjKMtN9KQf1ezLx/Sg/00FCvABHhjDjAAB4nGPw3sFwIihiIyNjX+QGxp0cDBwMyQUbGVidNjEwMmiBGJu5mBg5ICw+BjCLzWkX0wGgNCeQze60i8EBwmZmcNmowtgRGLHBoSNiI3OKy0Y1EG8XRwMDI4tDR3JIBEhJJBBs5mFi5NHawfi/dQNL70YmBhcADHYj9AAA) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable,
+.markdown-body .highlighttable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr,
+.markdown-body .highlighttable {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite,
+.markdown-body .highlighttable pre,
+.markdown-body .highlighttable div.highlight {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td,
+.markdown-body .highlighttable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite,
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.highlight {background-color:#fff;color:#333333;}
+.highlight .hll {background-color:#ffffcc;}
+.highlight .c{color:#999988;font-style:italic}
+.highlight .err{color:#a61717;background-color:#e3d2d2}
+.highlight .k{font-weight:bold}
+.highlight .o{font-weight:bold}
+.highlight .cm{color:#999988;font-style:italic}
+.highlight .cp{color:#999999;font-weight:bold}
+.highlight .c1{color:#999988;font-style:italic}
+.highlight .cs{color:#999999;font-weight:bold;font-style:italic}
+.highlight .gd{color:#000000;background-color:#ffdddd}
+.highlight .ge{font-style:italic}
+.highlight .gr{color:#aa0000}
+.highlight .gh{color:#999999}
+.highlight .gi{color:#000000;background-color:#ddffdd}
+.highlight .go{color:#888888}
+.highlight .gp{color:#555555}
+.highlight .gs{font-weight:bold}
+.highlight .gu{color:#800080;font-weight:bold}
+.highlight .gt{color:#aa0000}
+.highlight .kc{font-weight:bold}
+.highlight .kd{font-weight:bold}
+.highlight .kn{font-weight:bold}
+.highlight .kp{font-weight:bold}
+.highlight .kr{font-weight:bold}
+.highlight .kt{color:#445588;font-weight:bold}
+.highlight .m{color:#009999}
+.highlight .s{color:#dd1144}
+.highlight .n{color:#333333}
+.highlight .na{color:teal}
+.highlight .nb{color:#0086b3}
+.highlight .nc{color:#445588;font-weight:bold}
+.highlight .no{color:teal}
+.highlight .ni{color:purple}
+.highlight .ne{color:#990000;font-weight:bold}
+.highlight .nf{color:#990000;font-weight:bold}
+.highlight .nn{color:#555555}
+.highlight .nt{color:navy}
+.highlight .nv{color:teal}
+.highlight .ow{font-weight:bold}
+.highlight .w{color:#bbbbbb}
+.highlight .mf{color:#009999}
+.highlight .mh{color:#009999}
+.highlight .mi{color:#009999}
+.highlight .mo{color:#009999}
+.highlight .sb{color:#dd1144}
+.highlight .sc{color:#dd1144}
+.highlight .sd{color:#dd1144}
+.highlight .s2{color:#dd1144}
+.highlight .se{color:#dd1144}
+.highlight .sh{color:#dd1144}
+.highlight .si{color:#dd1144}
+.highlight .sx{color:#dd1144}
+.highlight .sr{color:#009926}
+.highlight .s1{color:#dd1144}
+.highlight .ss{color:#990073}
+.highlight .bp{color:#999999}
+.highlight .vc{color:teal}
+.highlight .vg{color:teal}
+.highlight .vi{color:teal}
+.highlight .il{color:#009999}
+.highlight .gc{color:#999;background-color:#EAF2F5}
+</style><title>output</title></head><body><article class="markdown-body"><h1 id="google-scholar-alerts">Google Scholar Alerts<a class="headerlink" href="#google-scholar-alerts" title="Permanent link"></a></h1>
+<h4 id="0-discrete-to-deep-reinforcement-learning-methods-12">0. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/article/10.1007/s00521-021-06270-6&amp;hl=en&amp;sa=X&amp;d=1266372463569354224&amp;ei=RbZfYfjiCYaP6rQP1_asgAM&amp;scisig=AAGBfm3S5tx_c1foN8HII-woQFVOvEMiGg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Discrete-to-deep reinforcement learning methods</a> (12)<a class="headerlink" href="#0-discrete-to-deep-reinforcement-learning-methods-12" title="Permanent link"></a></h4>
+<p><em>Authors: B Kurniawan, P Vamplew, M Papasimeon, R Dazeley… - Neural Computing and …, 2021</em> <br>
+Neural networks are effective function approximators, but hard to train in the reinforcement learning (RL) context mainly because samples are correlated. In complex problems, a neural RL approach is often able to learn a better solution than …</p>
+<h4 id="1-scalable-online-planning-via-reinforcement-learning-fine-tuning-11">1. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.15316&amp;hl=en&amp;sa=X&amp;d=7227011770104247926&amp;ei=mXFcYe1XktLJBPiUmKAH&amp;scisig=AAGBfm0rVNJ42_4AcQ0ei9FlsIjatVepRg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">Scalable Online Planning via Reinforcement Learning Fine-Tuning</a> (11)<a class="headerlink" href="#1-scalable-online-planning-via-reinforcement-learning-fine-tuning-11" title="Permanent link"></a></h4>
+<p><em>Authors: A Fickinger, H Hu, B Amos, S Russell, N Brown - arXiv preprint arXiv:2109.15316, 2021</em> <br>
+Lookahead search has been a critical component of recent AI successes, such as in the games of chess, go, and poker. However, the search methods used in these games, and in many other settings, are tabular. Tabular search methods do not scale …</p>
+<h4 id="2-improving-safety-in-deep-reinforcement-learning-using-unsupervised-action-planning-8">2. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14325&amp;hl=en&amp;sa=X&amp;d=1045618479867008983&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm0XYYlar6PYoL0JyxXDzOXq5ahkWw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">Improving Safety in Deep Reinforcement Learning using Unsupervised Action Planning</a> (8)<a class="headerlink" href="#2-improving-safety-in-deep-reinforcement-learning-using-unsupervised-action-planning-8" title="Permanent link"></a></h4>
+<p><em>Authors: HL Hsu, Q Huang, S Ha - arXiv preprint arXiv:2109.14325, 2021</em> <br>
+One of the key challenges to deep reinforcement learning (deep RL) is to ensure safety at both training and testing phases. In this work, we propose a novel technique of unsupervised action planning to improve the safety of on-policy reinforcement …</p>
+<h4 id="3-addressing-hindsight-bias-in-multigoal-reinforcement-learning-7">3. <a href="https://scholar.google.co.uk/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9531338/&amp;hl=en&amp;sa=X&amp;d=1254822250746380927&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm33_r1ZRAAKkC8JR1FgeNthcO5eSg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">Addressing Hindsight Bias in Multigoal Reinforcement Learning</a> (7)<a class="headerlink" href="#3-addressing-hindsight-bias-in-multigoal-reinforcement-learning-7" title="Permanent link"></a></h4>
+<p><em>Authors: C Bai, L Wang, Y Wang, Z Wang, R Zhao, C Bai, P Liu - IEEE Transactions on …, 2021</em> <br>
+Multigoal reinforcement learning (RL) extends the typical RL with goal-conditional value functions and policies. One efficient multigoal RL algorithm is the hindsight experience replay (HER). By treating a hindsight goal from failed experiences as the …</p>
+<h4 id="4-integrated-actor-critic-for-deep-reinforcement-learning-7">4. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-86380-7_41&amp;hl=en&amp;sa=X&amp;d=10426440922783729204&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm0BYCUj7wb1rR2B8Tzqay0CaTeAcg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Integrated Actor-Critic for Deep Reinforcement Learning</a> (7)<a class="headerlink" href="#4-integrated-actor-critic-for-deep-reinforcement-learning-7" title="Permanent link"></a></h4>
+<p><em>Authors: J Zheng, MN Kurt, X Wang - International Conference on Artificial Neural Networks, 2021</em> <br>
+We propose a new deep deterministic actor-critic algorithm with an integrated network architecture and an integrated objective function. We address stabilization of the learning procedure via a novel adaptive objective that roughly ensures keeping …</p>
+<h4 id="5-deductive-reinforcement-learning-for-visual-autonomous-urban-driving-navigation-5">5. <a href="https://scholar.google.co.uk/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9537641/&amp;hl=en&amp;sa=X&amp;d=16312194837103073199&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm3H8SGFoyEx1L3Hx-1mwNncvciPDA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">Deductive Reinforcement Learning for Visual Autonomous Urban Driving Navigation</a> (5)<a class="headerlink" href="#5-deductive-reinforcement-learning-for-visual-autonomous-urban-driving-navigation-5" title="Permanent link"></a></h4>
+<p><em>Authors: C Huang, R Zhang, M Ouyang, P Wei, J Lin, J Su, L Lin - IEEE Transactions on …, 2021</em> <br>
+Existing deep reinforcement learning (RL) are devoted to research applications on video games, eg, The Open Racing Car Simulator (TORCS) and Atari games. However, it remains under-explored for vision-based autonomous urban driving …</p>
+<h4 id="6-opirl-sample-efficient-off-policy-inverse-reinforcement-learning-via-distribution-matching-5">6. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04307&amp;hl=en&amp;sa=X&amp;d=8862119465373499347&amp;ei=RbZfYeHOHY2oywTy66jAAQ&amp;scisig=AAGBfm2qxrxCImkAaMV880yCzuB1TZCIGg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">OPIRL: Sample Efficient Off-Policy Inverse Reinforcement Learning via Distribution Matching</a> (5)<a class="headerlink" href="#6-opirl-sample-efficient-off-policy-inverse-reinforcement-learning-via-distribution-matching-5" title="Permanent link"></a></h4>
+<p><em>Authors: H Hoshino, K Ota, A Kanezaki, R Yokota - arXiv preprint arXiv:2109.04307, 2021</em> <br>
+Inverse Reinforcement Learning (IRL) is attractive in scenarios where reward engineering can be tedious. However, prior IRL algorithms use on-policy transitions, which require intensive sampling from the current policy for stable and optimal …</p>
+<h4 id="7-soft-hierarchical-graph-recurrent-networks-for-many-agent-partially-observable-environments-5">7. <a href="https://scholar.google.co.th/scholar_url?url=https://www.researchgate.net/profile/Zhenhui-Ye/publication/354400471_Soft_Hierarchical_Graph_Recurrent_Networks_for_Many-Agent_Partially_Observable_Environments/links/613b476ff07b08309084c66b/Soft-Hierarchical-Graph-Recurrent-Networks-for-Many-Agent-Partially-Observable-Environments.pdf&amp;hl=en&amp;sa=X&amp;d=2141965067222256474&amp;ei=RbZfYfSOF6XGywS7_I6ABQ&amp;scisig=AAGBfm0hGuPehxsu9ErevAOU_T5RSPBHhg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7760063636988435610:AAGBfm38uzFg17Bo7O74k1Ku-6ndOzK3EA&amp;html=&amp;folt=rel">Soft Hierarchical Graph Recurrent Networks for Many-Agent Partially Observable Environments</a> (5)<a class="headerlink" href="#7-soft-hierarchical-graph-recurrent-networks-for-many-agent-partially-observable-environments-5" title="Permanent link"></a></h4>
+<p><em>Authors: ZYX Jiang, G Song, B Yang</em> <br>
+The recent progress in multi-agent deep reinforcement learning (MADRL) makes it more practical in real-world tasks, but its relatively poor scalability and the partially observable constraint raise challenges to its performance and deployment. Based on …</p>
+<h4 id="8-learning-at-variable-attentional-load-requires-cooperation-of-working-memory-meta-learning-and-attention-augmented-reinforcement-learning-5">8. <a href="https://scholar.google.co.uk/scholar_url?url=https://direct.mit.edu/jocn/article-abstract/doi/10.1162/jocn_a_01780/107507&amp;hl=en&amp;sa=X&amp;d=5377482077235172332&amp;ei=mHFcYYmIH4KNmwHokry4Dw&amp;scisig=AAGBfm3rN5lMm5tvB3q-judnda9HnOxtcg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5758469387544328234:AAGBfm2HsX7qtkmyM7FyMmxG1iW3gzhOQg&amp;html=&amp;folt=rel">Learning at Variable Attentional Load Requires Cooperation of Working Memory, Meta-learning and Attention-augmented Reinforcement Learning</a> (5)<a class="headerlink" href="#8-learning-at-variable-attentional-load-requires-cooperation-of-working-memory-meta-learning-and-attention-augmented-reinforcement-learning-5" title="Permanent link"></a></h4>
+<p><em>Authors: T Womelsdorf, MR Watson, P Tiesinga - Journal of Cognitive Neuroscience, 2021</em> <br>
+Flexible learning of changing reward contingencies can be realized with different strategies. A fast learning strategy involves using working memory of recently rewarded objects to guide choices. A slower learning strategy uses prediction errors …</p>
+<h4 id="9-learning-dynamics-models-for-model-predictive-agents-5">9. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14311&amp;hl=en&amp;sa=X&amp;d=17473149843131528505&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm3LC8SWw_BSUneHvA_EoWL-YGWrmA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">Learning Dynamics Models for Model Predictive Agents</a> (5)<a class="headerlink" href="#9-learning-dynamics-models-for-model-predictive-agents-5" title="Permanent link"></a></h4>
+<p><em>Authors: M Lutter, L Hasenclever, A Byravan, G Dulac-Arnold… - arXiv preprint arXiv …, 2021</em> <br>
+Model-Based Reinforcement Learning involves learning a\textit {dynamics model} from data, and then using this model to optimise behaviour, most often with an online\textit {planner}. Much of the recent research along these lines presents a …</p>
+<h4 id="10-decentralized-role-assignment-in-multi-agent-teams-via-empirical-game-theoretic-analysis-5">10. <a href="https://scholar.google.co.th/scholar_url?url=https://arxiv.org/pdf/2109.14755&amp;hl=en&amp;sa=X&amp;d=3373952708925534665&amp;ei=mHFcYeXdENWR6rQPoZmruAk&amp;scisig=AAGBfm0MnwI92QKfAJtS1WDTxbDJg8Ttwg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:25850099265593436:AAGBfm00MiDdt0osmHYjWmlP7UOvIyejVg&amp;html=&amp;folt=rel">Decentralized Role Assignment in Multi-Agent Teams via Empirical Game-Theoretic Analysis</a> (5)<a class="headerlink" href="#10-decentralized-role-assignment-in-multi-agent-teams-via-empirical-game-theoretic-analysis-5" title="Permanent link"></a></h4>
+<p><em>Authors: F Yang, N Mehr, M Schwager - arXiv preprint arXiv:2109.14755, 2021</em> <br>
+We propose a method, based on empirical game theory, for a robot operating as part of a team to choose its role within the team without explicitly communicating with team members, by leveraging its knowledge about the team structure. To do this, we …</p>
+<h4 id="11-lifelong-robotic-reinforcement-learning-by-retaining-experiences-4">11. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.09180&amp;hl=en&amp;sa=X&amp;d=16101670298788160845&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm3JVYqXE5Z5w_Jd97WjkOI4-SrJ0Q&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">Lifelong Robotic Reinforcement Learning by Retaining Experiences</a> (4)<a class="headerlink" href="#11-lifelong-robotic-reinforcement-learning-by-retaining-experiences-4" title="Permanent link"></a></h4>
+<p><em>Authors: A Xie, C Finn - arXiv preprint arXiv:2109.09180, 2021</em> <br>
+Multi-task learning ideally allows robots to acquire a diverse repertoire of useful skills. However, many multi-task reinforcement learning efforts assume the robot can collect data from all tasks at all times. In reality, the tasks that the robot learns arrive …</p>
+<h4 id="12-behaviour-conditioned-policies-for-cooperative-reinforcement-learning-tasks-4">12. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-86380-7_40&amp;hl=en&amp;sa=X&amp;d=17432961033923908638&amp;ei=RbZfYYvTIoWM6rQPo_eDyAg&amp;scisig=AAGBfm2YhVbAwhi6PEB50hLXyIQM-tPRBA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">Behaviour-Conditioned Policies for Cooperative Reinforcement Learning Tasks</a> (4)<a class="headerlink" href="#12-behaviour-conditioned-policies-for-cooperative-reinforcement-learning-tasks-4" title="Permanent link"></a></h4>
+<p><em>Authors: A Keurulainen, I Westerlund, A Kwiatkowski, S Kaski… - International Conference on …, 2021</em> <br>
+The cooperation among AI systems, and between AI systems and humans is becoming increasingly important. In various real-world tasks, an agent needs to cooperate with unknown partner agent types. This requires the agent to assess the …</p>
+<h4 id="13-value-learning-from-trajectory-optimization-and-sobolev-descent-a-step-toward-reinforcement-learning-with-superlinear-convergence-properties-4">13. <a href="https://scholar.google.com/scholar_url?url=https://hal.archives-ouvertes.fr/hal-03356261/document&amp;hl=en&amp;sa=X&amp;d=14665967081072823963&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm2nwhfVEI3UskVVwzxL8wuXRnQVAg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">Value learning from trajectory optimization and Sobolev descent: A step toward reinforcement learning with superlinear convergence properties</a> (4)<a class="headerlink" href="#13-value-learning-from-trajectory-optimization-and-sobolev-descent-a-step-toward-reinforcement-learning-with-superlinear-convergence-properties-4" title="Permanent link"></a></h4>
+<p><em>Authors: A Parag, S Kleff, L Saci, N Mansard, O Stasse - International Conference on Robotics …, 2022</em> <br>
+The recent successes in deep reinforcement learning largely rely on the capabilities of generating masses of data, which in turn implies the use of a simulator. In particular, current progress in multi body dynamic simulators are underpinning the …</p>
+<h4 id="14-sozil-self-optimal-zero-shot-imitation-learning-4">14. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9552943/&amp;hl=en&amp;sa=X&amp;d=16163869481555709159&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm1l_QJJNtM9_xCknPLcGnLHLDpM2A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">SOZIL: Self-Optimal Zero-shot Imitation Learning</a> (4)<a class="headerlink" href="#14-sozil-self-optimal-zero-shot-imitation-learning-4" title="Permanent link"></a></h4>
+<p><em>Authors: P Hao, T Lu, S Cui, J Wei, Y Cai, S Wang - IEEE Transactions on Cognitive and …, 2021</em> <br>
+Zero-shot imitation learning has demonstrated its superiority to learn complex robotic tasks with less human participation. Recent studies show convincing performance under the condition that the robot follows the demonstration strictly by the learned …</p>
+<h4 id="15-dr-jekyll-and-mr-hyde-the-strange-case-of-off-policy-policy-updates-4">15. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14727&amp;hl=en&amp;sa=X&amp;d=1202983451282599094&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm1n3q2MRIUpteKEbR0yW4574bL1zg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">Dr Jekyll and Mr Hyde: the Strange Case of Off-Policy Policy Updates</a> (4)<a class="headerlink" href="#15-dr-jekyll-and-mr-hyde-the-strange-case-of-off-policy-policy-updates-4" title="Permanent link"></a></h4>
+<p><em>Authors: R Laroche, R Tachet - arXiv preprint arXiv:2109.14727, 2021</em> <br>
+The policy gradient theorem states that the policy should only be updated in states that are visited by the current policy, which leads to insufficient planning in the off-policy states, and thus to convergence to suboptimal policies. We tackle this planning …</p>
+<h4 id="16-qsod-hybrid-policy-gradient-for-deep-multi-agent-reinforcement-learning-4">16. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/iel7/6287639/9312710/09540595.pdf&amp;hl=en&amp;sa=X&amp;d=16300219227934121222&amp;ei=mHFcYe7pIM6_mQHMm7boDg&amp;scisig=AAGBfm2tbLcpwpYj9tyNm1DPhfTNFQbDIg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:6466109163456983537:AAGBfm1ShsvT1DDDgXJFYOMY4YvAtzuNpQ&amp;html=&amp;folt=rel">QSOD: Hybrid Policy Gradient for Deep Multi-agent Reinforcement Learning</a> (4)<a class="headerlink" href="#16-qsod-hybrid-policy-gradient-for-deep-multi-agent-reinforcement-learning-4" title="Permanent link"></a></h4>
+<p><em>Authors: HMR ur Rehman, ON Byung-Won, DD Ningombam… - IEEE Access, 2021</em> <br>
+When individuals interact with one another to accomplish specific goals, they learn from others&rsquo; experiences to achieve the tasks at hand. The same holds for learning in virtual environments, such as video games. Deep multiagent reinforcement learning …</p>
+<h4 id="17-effect-of-dialogue-structure-and-memory-on-language-emergence-in-a-multi-task-game-4">17. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-88113-9_17&amp;hl=en&amp;sa=X&amp;d=16248457290781412715&amp;ei=mHFcYe7pIM6_mQHMm7boDg&amp;scisig=AAGBfm2xmSs_voZYtIjLPgQqI38YXPbTSQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:6466109163456983537:AAGBfm1ShsvT1DDDgXJFYOMY4YvAtzuNpQ&amp;html=&amp;folt=rel">Effect of Dialogue Structure and Memory on Language Emergence in a Multi-task Game</a> (4)<a class="headerlink" href="#17-effect-of-dialogue-structure-and-memory-on-language-emergence-in-a-multi-task-game-4" title="Permanent link"></a></h4>
+<p><em>Authors: K Vithanage, R Wijesinghe, A Xavier, D Tissera… - International Conference on …, 2021</em> <br>
+In language emergence, neural agents engage in finite-length conversations using a finite set of symbols to reach a given goal. In such systems, two key factors can determine the dialogue structure; the size of the symbol set and the conversation …</p>
+<h4 id="18-carl-conditional-value-at-risk-adversarial-reinforcement-learning-3">18. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.09470&amp;hl=en&amp;sa=X&amp;d=520862100264767544&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm2vcm0A6gUkSVUaR9QD_113c-g4Mg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">CARL: Conditional-value-at-risk Adversarial Reinforcement Learning</a> (3)<a class="headerlink" href="#18-carl-conditional-value-at-risk-adversarial-reinforcement-learning-3" title="Permanent link"></a></h4>
+<p><em>Authors: M Godbout, M Heuillet, S Chandra, R Bhati, A Durand - arXiv preprint arXiv …, 2021</em> <br>
+In this paper we present a risk-averse reinforcement learning (RL) method called Conditional value-at-risk Adversarial Reinforcement Learning (CARL). To the best of our knowledge, CARL is the first game formulation for Conditional Value-at-Risk …</p>
+<h4 id="19-deep-reinforcement-learning-with-adjustments-3">19. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.13463&amp;hl=en&amp;sa=X&amp;d=5238536676369889761&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm1ric64IJeKE4Aw91rJ078BXQQVsA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">Deep Reinforcement Learning with Adjustments</a> (3)<a class="headerlink" href="#19-deep-reinforcement-learning-with-adjustments-3" title="Permanent link"></a></h4>
+<p><em>Authors: H Khorasgani, H Wang, C Gupta, S Serita - arXiv preprint arXiv:2109.13463, 2021</em> <br>
+Deep reinforcement learning (RL) algorithms can learn complex policies to optimize agent operation over time. RL algorithms have shown promising results in solving complicated problems in recent years. However, their application on real-world …</p>
+<h4 id="20-a-deep-reinforcement-learning-algorithm-based-on-tetanic-stimulation-and-amnesic-mechanisms-for-continuous-control-of-multi-dof-manipulator-3">20. <a href="https://scholar.google.com/scholar_url?url=https://www.mdpi.com/2076-0825/10/10/254/pdf&amp;hl=en&amp;sa=X&amp;d=3548089671471040059&amp;ei=RbZfYaXBKYLQyQTB27FY&amp;scisig=AAGBfm3u8cD9jLX1Rn3b8hV-12QI5i-8Jw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16097065438817006738:AAGBfm22QI-Sx-nZRMibQqPW8hmyvmARuw&amp;html=&amp;folt=rel">A Deep Reinforcement Learning Algorithm Based on Tetanic Stimulation and Amnesic Mechanisms for Continuous Control of Multi-DOF Manipulator</a> (3)<a class="headerlink" href="#20-a-deep-reinforcement-learning-algorithm-based-on-tetanic-stimulation-and-amnesic-mechanisms-for-continuous-control-of-multi-dof-manipulator-3" title="Permanent link"></a></h4>
+<p><em>Authors: Y Hou, H Hong, D Xu, Z Zeng, Y Chen, Z Liu - Actuators, 2021</em> <br>
+Deep Reinforcement Learning (DRL) has been an active research area in view of its capability in solving large-scale control problems. Until presently, many algorithms have been developed, such as Deep Deterministic Policy Gradient (DDPG), Twin …</p>
+<h4 id="21-hierarchies-of-planning-and-reinforcement-learning-for-robot-navigation-3">21. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.11178&amp;hl=en&amp;sa=X&amp;d=14279322346722262368&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm2ll14Xd0q2tJhL-0upVPKIloKY1g&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Hierarchies of Planning and Reinforcement Learning for Robot Navigation</a> (3)<a class="headerlink" href="#21-hierarchies-of-planning-and-reinforcement-learning-for-robot-navigation-3" title="Permanent link"></a></h4>
+<p><em>Authors: J Wöhlke, F Schmitt, H van Hoof - arXiv preprint arXiv:2109.11178, 2021</em> <br>
+Solving robotic navigation tasks via reinforcement learning (RL) is challenging due to their sparse reward and long decision horizon nature. However, in many navigation tasks, high-level (HL) task representations, like a rough floor plan, are available …</p>
+<h4 id="22-l-2-nas-learning-to-optimize-neural-architectures-via-continuous-action-reinforcement-learning-3">22. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.12425&amp;hl=en&amp;sa=X&amp;d=11893885364364042655&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm3Bv3yHPqvgk38Qgb7FFcwmFnTrcw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">L $^{2} $ NAS: Learning to Optimize Neural Architectures via Continuous-Action Reinforcement Learning</a> (3)<a class="headerlink" href="#22-l-2-nas-learning-to-optimize-neural-architectures-via-continuous-action-reinforcement-learning-3" title="Permanent link"></a></h4>
+<p><em>Authors: KG Mills, FX Han, M Salameh, SSC Rezaei, L Kong… - arXiv preprint arXiv …, 2021</em> <br>
+Neural architecture search (NAS) has achieved remarkable results in deep neural network design. Differentiable architecture search converts the search over discrete architectures into a hyperparameter optimization problem which can be solved by …</p>
+<h4 id="23-saliency-guided-experience-packing-for-replay-in-continual-learning-3">23. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04954&amp;hl=en&amp;sa=X&amp;d=1465471311011466826&amp;ei=RbZfYeHOHY2oywTy66jAAQ&amp;scisig=AAGBfm221Md1dAEtn7-RiUZt7bR6br0Dkg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">Saliency Guided Experience Packing for Replay in Continual Learning</a> (3)<a class="headerlink" href="#23-saliency-guided-experience-packing-for-replay-in-continual-learning-3" title="Permanent link"></a></h4>
+<p><em>Authors: G Saha, K Roy - arXiv preprint arXiv:2109.04954, 2021</em> <br>
+Artificial learning systems aspire to mimic human intelligence by continually learning from a stream of tasks without forgetting past knowledge. One way to enable such learning is to store past experiences in the form of input examples in episodic …</p>
+<h4 id="24-visuomotor-reinforcement-learning-for-multirobot-cooperative-navigation-3">24. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9555922/&amp;hl=en&amp;sa=X&amp;d=17759419645803895615&amp;ei=RbZfYfG3EKSK6rQP7_qhuA4&amp;scisig=AAGBfm0jP5eoM0bTEQrQOGwqqJVN8x9Scw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7075396416332708986:AAGBfm2ikwDLRO1om_kwNYRFfORapex4mg&amp;html=&amp;folt=rel">Visuomotor Reinforcement Learning for Multirobot Cooperative Navigation</a> (3)<a class="headerlink" href="#24-visuomotor-reinforcement-learning-for-multirobot-cooperative-navigation-3" title="Permanent link"></a></h4>
+<p><em>Authors: Z Liu, Q Liu, L Tang, K Jin, H Wang, M Liu, H Wang - IEEE Transactions on …, 2021</em> <br>
+This article investigates the multirobot cooperative navigation problem based on raw visual observations. A fully end-to-end learning framework is presented, which leverages graph neural networks to learn local motion coordination and utilizes deep …</p>
+<h4 id="25-direct-random-search-for-fine-tuning-of-deep-reinforcement-learning-policies-3">25. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05604&amp;hl=en&amp;sa=X&amp;d=5156025170754313818&amp;ei=RbZfYYvTIoWM6rQPo_eDyAg&amp;scisig=AAGBfm1d6gSJLYrYmonCnlCGqn0ImJNRSw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">Direct Random Search for Fine Tuning of Deep Reinforcement Learning Policies</a> (3)<a class="headerlink" href="#25-direct-random-search-for-fine-tuning-of-deep-reinforcement-learning-policies-3" title="Permanent link"></a></h4>
+<p><em>Authors: S Gillen, A Ozmen, K Byl - arXiv preprint arXiv:2109.05604, 2021</em> <br>
+Researchers have demonstrated that Deep Reinforcement Learning (DRL) is a powerful tool for finding policies that perform well on complex robotic systems. However, these policies are often unpredictable and can induce highly variable …</p>
+<h4 id="26-real-robot-challenge-using-deep-reinforcement-learning-3">26. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.15233&amp;hl=en&amp;sa=X&amp;d=8003937515817201532&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm3k9qg8vjZeXDXuJIAUXU7tC0M-AQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">Real Robot Challenge using Deep Reinforcement Learning</a> (3)<a class="headerlink" href="#26-real-robot-challenge-using-deep-reinforcement-learning-3" title="Permanent link"></a></h4>
+<p><em>Authors: R McCarthy, FR Sanchez, K McGuinness, N O&rsquo;Connor… - arXiv preprint arXiv …, 2021</em> <br>
+This paper details our winning submission to Phase 1 of the 2021 Real Robot Challenge, a challenge in which a three fingered robot must carry a cube along specified goal trajectories. To solve Phase 1, we use a pure reinforcement learning …</p>
+<h4 id="27-task-independent-causal-state-abstraction-3">27. <a href="https://scholar.google.com/scholar_url?url=https://www.cs.utexas.edu/~xiao/papers/ticsa.pdf&amp;hl=en&amp;sa=X&amp;d=8388178701334297330&amp;ei=mHFcYb2bNMuNywSZgbWADg&amp;scisig=AAGBfm3qQDLlD2KqxXRmD4gVc3AwvQrXOQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:11280559324942125191:AAGBfm29fBcdrUC6UKv2SU_xuy_p-nxpdg&amp;html=&amp;folt=art">Task-Independent Causal State Abstraction</a> (3)<a class="headerlink" href="#27-task-independent-causal-state-abstraction-3" title="Permanent link"></a></h4>
+<p><em>Authors: Z Wang, X Xiao, P Stone</em> <br>
+Learning dynamics models accurately and learning policies sample-efficiently are two important challenges for Model-Based Reinforcement Learning (MBRL). Regarding dynamics accuracy, in contrast to the sparse dynamics exhibited in many …</p>
+<h4 id="28-evaluating-the-impact-of-curriculum-learning-on-the-training-process-for-an-intelligent-agent-in-a-video-game-3">28. <a href="https://scholar.google.com/scholar_url?url=https://www.journal.iberamia.org/index.php/intartif/article/download/532/146&amp;hl=en&amp;sa=X&amp;d=17917617000928451390&amp;ei=mXFcYe1XktLJBPiUmKAH&amp;scisig=AAGBfm0ZLXmFdaWDJas5afQtZmYs7teczA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">Evaluating the impact of curriculum learning on the training process for an intelligent agent in a video game</a> (3)<a class="headerlink" href="#28-evaluating-the-impact-of-curriculum-learning-on-the-training-process-for-an-intelligent-agent-in-a-video-game-3" title="Permanent link"></a></h4>
+<p><em>Authors: JE Camargo, R Sáenz - Inteligencia Artificial, 2021</em> <br>
+We want to measure the impact of the curriculum learning technique on a reinforcement training setup, several experiments were designed with different training curriculums adapted for the video game chosen as a case study. Then all …</p>
+<h4 id="29-solving-challenging-control-problems-using-two-staged-deep-reinforcement-learning-2">29. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.13338&amp;hl=en&amp;sa=X&amp;d=4568195365358431273&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm1TZZtWByY76UOW8RXNuSk62IuULA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">Solving Challenging Control Problems Using Two-Staged Deep Reinforcement Learning</a> (2)<a class="headerlink" href="#29-solving-challenging-control-problems-using-two-staged-deep-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: N Sontakke, S Ha - arXiv preprint arXiv:2109.13338, 2021</em> <br>
+We present a two-staged deep reinforcement learning algorithm for solving challenging control problems. Deep reinforcement learning (deep RL) has been an effective tool for solving many high-dimensional continuous control problems, but it …</p>
+<h4 id="30-vision-guided-quadrupedal-locomotion-in-the-wild-with-multi-modal-delay-randomization-2">30. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14549&amp;hl=en&amp;sa=X&amp;d=12853285241686993548&amp;ei=RbZfYbePHKPZsQKvo78o&amp;scisig=AAGBfm2bHXeM7HBz7Rj5oPxzSQutBnfZxg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12129537905387702957:AAGBfm0Vo9yPXkpMiwin89_VZR4QGFWp6g&amp;html=&amp;folt=rel">Vision-Guided Quadrupedal Locomotion in the Wild with Multi-Modal Delay Randomization</a> (2)<a class="headerlink" href="#30-vision-guided-quadrupedal-locomotion-in-the-wild-with-multi-modal-delay-randomization-2" title="Permanent link"></a></h4>
+<p><em>Authors: CS Imai, M Zhang, Y Zhang, M Kierebinski, R Yang… - arXiv preprint arXiv …, 2021</em> <br>
+Developing robust vision-guided controllers for quadrupedal robots in complex environments, with various obstacles, dynamical surroundings and uneven terrains, is very challenging. While Reinforcement Learning (RL) provides a promising …</p>
+<h4 id="31-a-model-based-reinforcement-learning-method-based-on-conditional-generative-adversarial-network-2">31. <a href="https://scholar.google.com/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S0167865521003111&amp;hl=en&amp;sa=X&amp;d=5418518104638201030&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm3nAWQvJqm2almYt-TDPvajauqQYQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">A Model-based Reinforcement Learning Method based on Conditional Generative Adversarial Network</a> (2)<a class="headerlink" href="#31-a-model-based-reinforcement-learning-method-based-on-conditional-generative-adversarial-network-2" title="Permanent link"></a></h4>
+<p><em>Authors: T Zhao, Y Wang, G Li, L Kong, Y Chen, Y Wang, N Xie… - Pattern Recognition Letters, 2021</em> <br>
+Reinforcement learning (RL) aims at continually improving the decision making ability of an agent through autonomous trials-and-errors, which learns an optimal policy through interactions with an unknown environment [1],[2],[3]. Recently, RL has …</p>
+<h4 id="32-federated-ensemble-model-based-reinforcement-learning-2">32. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05549&amp;hl=en&amp;sa=X&amp;d=10964282242768942514&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm1udtSrS7hlzxrQwiGmB6xUmGtSjg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Federated Ensemble Model-based Reinforcement Learning</a> (2)<a class="headerlink" href="#32-federated-ensemble-model-based-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: J Wang, J Hu, J Mills, G Min - arXiv preprint arXiv:2109.05549, 2021</em> <br>
+Federated learning (FL) is a privacy-preserving machine learning paradigm that enables collaborative training among geographically distributed and heterogeneous users without gathering their data. Extending FL beyond the conventional supervised …</p>
+<h4 id="33-attention-manipulation-in-reinforcement-learning-agents-2">33. <a href="https://scholar.google.com/scholar_url?url=https://ocorcoll.com/publication/manipulation/manipulation.pdf&amp;hl=en&amp;sa=X&amp;d=850311099020375809&amp;ei=RbZfYeitFKzcsQLo8o2gBg&amp;scisig=AAGBfm3QOsFQwr2txn-zXiQvoSccv83MSw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7179431164517902851:AAGBfm1FBFMTtCuZByLmSms5k15XoBuIgg&amp;html=&amp;folt=rel">Attention manipulation in reinforcement learning agents</a> (2)<a class="headerlink" href="#33-attention-manipulation-in-reinforcement-learning-agents-2" title="Permanent link"></a></h4>
+<p><em>Authors: O Corcoll, A Makkeh, J Aru, DO Theis, RV Zafra</em> <br>
+The ability to change others&rsquo; attention for our own benefit is referred to as attention manipulation and is known to be an important cognitive ability for coordination in cooperative tasks. In this work, we formulate attention manipulation in the context of …</p>
+<h4 id="34-on-the-approximation-of-cooperative-heterogeneous-multi-agent-reinforcement-learning-marl-using-mean-field-control-mfc-2">34. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04024&amp;hl=en&amp;sa=X&amp;d=15457563977903178365&amp;ei=RbZfYeHOHY2oywTy66jAAQ&amp;scisig=AAGBfm0vZKsp9gwQQ9YD9LXqRE3IHQ-PHQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">On the Approximation of Cooperative Heterogeneous Multi-Agent Reinforcement Learning (MARL) using Mean Field Control (MFC)</a> (2)<a class="headerlink" href="#34-on-the-approximation-of-cooperative-heterogeneous-multi-agent-reinforcement-learning-marl-using-mean-field-control-mfc-2" title="Permanent link"></a></h4>
+<p><em>Authors: WU Mondal, M Agarwal, V Aggarwal, SV Ukkusuri - arXiv preprint arXiv:2109.04024, 2021</em> <br>
+Mean field control (MFC) is an effective way to mitigate the curse of dimensionality of cooperative multi-agent reinforcement learning (MARL) problems. This work considers a collection of $ N_ {\mathrm {pop}} $ heterogeneous agents that can be …</p>
+<h4 id="35-romax-certifiably-robust-deep-multiagent-reinforcement-learning-via-convex-relaxation-2">35. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.06795&amp;hl=en&amp;sa=X&amp;d=15211809885157430156&amp;ei=RbZfYeHOHY2oywTy66jAAQ&amp;scisig=AAGBfm3UtpaVlU_lPYlrAfCBoivGBrH0jg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">ROMAX: Certifiably Robust Deep Multiagent Reinforcement Learning via Convex Relaxation</a> (2)<a class="headerlink" href="#35-romax-certifiably-robust-deep-multiagent-reinforcement-learning-via-convex-relaxation-2" title="Permanent link"></a></h4>
+<p><em>Authors: C Sun, DK Kim, JP How - arXiv preprint arXiv:2109.06795, 2021</em> <br>
+In a multirobot system, a number of cyber-physical attacks (eg, communication hijack, observation perturbations) can challenge the robustness of agents. This robustness issue worsens in multiagent reinforcement learning because there exists the non …</p>
+<h4 id="36-versions-of-gradient-temporal-difference-learning-2">36. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04033&amp;hl=en&amp;sa=X&amp;d=6562655569832058792&amp;ei=RbZfYeHOHY2oywTy66jAAQ&amp;scisig=AAGBfm0ZAtiquLH5LtWc4dOzeJUeJ5BrAw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">Versions of Gradient Temporal Difference Learning</a> (2)<a class="headerlink" href="#36-versions-of-gradient-temporal-difference-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: D Lee, HD Lim, J Park, O Choi - arXiv preprint arXiv:2109.04033, 2021</em> <br>
+Sutton, Szepesv'{a} ri and Maei introduced the first gradient temporal-difference (GTD) learning algorithms compatible with both linear function approximation and off-policy training. The goal of this paper is (a) to propose some variants of GTDs with …</p>
+<h4 id="37-rapid-rl-a-reconfigurable-architecture-with-preemptive-exits-for-efficient-deep-reinforcement-learning-2">37. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.08231&amp;hl=en&amp;sa=X&amp;d=3352086093868986240&amp;ei=RbZfYaelGdWR6rQPoZmruAk&amp;scisig=AAGBfm3FnFzGhPW1I6s8HjN1zHSKVK92Nw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">RAPID-RL: A Reconfigurable Architecture with Preemptive-Exits for Efficient Deep-Reinforcement Learning</a> (2)<a class="headerlink" href="#37-rapid-rl-a-reconfigurable-architecture-with-preemptive-exits-for-efficient-deep-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: AK Kosta, MA Anwar, P Panda, A Raychowdhury… - arXiv preprint arXiv …, 2021</em> <br>
+Present-day Deep Reinforcement Learning (RL) systems show great promise towards building intelligent agents surpassing human-level performance. However, the computational complexity associated with the underlying deep neural networks …</p>
+<h4 id="38-density-based-curriculum-for-multi-goal-reinforcement-learning-with-sparse-rewards-2">38. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.08903&amp;hl=en&amp;sa=X&amp;d=3814465582522754192&amp;ei=RbZfYaelGdWR6rQPoZmruAk&amp;scisig=AAGBfm2Pwi7VL-HgTQ01EY-umCxi6Rxluw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Density-based Curriculum for Multi-goal Reinforcement Learning with Sparse Rewards</a> (2)<a class="headerlink" href="#38-density-based-curriculum-for-multi-goal-reinforcement-learning-with-sparse-rewards-2" title="Permanent link"></a></h4>
+<p><em>Authors: D Yang, H Zhang, X Lan, J Ding - arXiv preprint arXiv:2109.08903, 2021</em> <br>
+Multi-goal reinforcement learning (RL) aims to qualify the agent to accomplish multi-goal tasks, which is of great importance in learning scalable robotic manipulation skills. However, reward engineering always requires strenuous efforts in multi-goal …</p>
+<h4 id="39-aimed-rl-exploring-adversarial-malware-examples-with-reinforcement-learning-2">39. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-86514-6_3&amp;hl=en&amp;sa=X&amp;d=366125303709219150&amp;ei=RbZfYYvTIoWM6rQPo_eDyAg&amp;scisig=AAGBfm24v2Zk7nosmybvbvbxcx_uj4o_Iw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">AIMED-RL: Exploring Adversarial Malware Examples with Reinforcement Learning</a> (2)<a class="headerlink" href="#39-aimed-rl-exploring-adversarial-malware-examples-with-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: R Labaca-Castro, S Franz, GD Rodosek - Joint European Conference on Machine …, 2021</em> <br>
+Abstract Machine learning models have been widely implemented to classify software. These models allow to generalize static features of Windows portable executable files. While highly accurate in terms of classification, they still exhibit …</p>
+<h4 id="40-uncertainty-aware-autonomous-mobile-robot-navigation-with-deep-reinforcement-learning-2">40. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-77939-9_7&amp;hl=en&amp;sa=X&amp;d=1188551740808171743&amp;ei=RbZfYcb-BcKSy9YPu-2n8AU&amp;scisig=AAGBfm1BfjR1mAZSaKuUmwunICZrOSVBJw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:942002207151750780:AAGBfm354y2cW38IF4_kKp4qgExZPC4Low&amp;html=&amp;folt=rel">Uncertainty-Aware Autonomous Mobile Robot Navigation with Deep Reinforcement Learning</a> (2)<a class="headerlink" href="#40-uncertainty-aware-autonomous-mobile-robot-navigation-with-deep-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: L González-Rodríguez, A Plasencia-Salgueiro - Deep Learning for Unmanned …, 2021</em> <br>
+Autonomous robots are capable of making decisions based on the information they can obtain from their environments, as opposed to simply following a program. Reinforcement learning is a machine learning paradigm that is widely used in …</p>
+<h4 id="41-hybrid-policy-learning-for-multi-agent-pathfinding-2">41. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/iel7/6287639/9312710/09532001.pdf&amp;hl=en&amp;sa=X&amp;d=2035405234864938593&amp;ei=RbZfYfjiCYaP6rQP1_asgAM&amp;scisig=AAGBfm0Wz_eInUpsQFihBizbxXkdqeCZNw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Hybrid Policy Learning for Multi-agent Pathfinding</a> (2)<a class="headerlink" href="#41-hybrid-policy-learning-for-multi-agent-pathfinding-2" title="Permanent link"></a></h4>
+<p><em>Authors: A Skrynnik, A Yakovleva, V Davydov, K Yakovlev… - IEEE Access, 2021</em> <br>
+In this work we study the behavior of groups of autonomous vehicles, which are the part of the Internet of Vehicles systems. One of the challenging modes of operation of such systems is the case when the observability of each vehicle is limited and the …</p>
+<h4 id="42-regularization-guarantees-generalization-in-bayesian-reinforcement-learning-through-algorithmic-stability-2">42. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.11792&amp;hl=en&amp;sa=X&amp;d=13661780711351973785&amp;ei=RbZfYYiiK8KSy9YPu-2n8AU&amp;scisig=AAGBfm1IlCIqJPTkRmMWaV2ECO0ykfz4qg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16893544014717538225:AAGBfm2Lx68K3PqmoqxML2edSMMU91RQng&amp;html=&amp;folt=rel">Regularization Guarantees Generalization in Bayesian Reinforcement Learning through Algorithmic Stability</a> (2)<a class="headerlink" href="#42-regularization-guarantees-generalization-in-bayesian-reinforcement-learning-through-algorithmic-stability-2" title="Permanent link"></a></h4>
+<p><em>Authors: A Tamar, D Soudry, E Zisselman - arXiv preprint arXiv:2109.11792, 2021</em> <br>
+In the Bayesian reinforcement learning (RL) setting, a prior distribution over the unknown problem parameters&ndash;the rewards and transitions&ndash;is assumed, and a policy that optimizes the (posterior) expected return is sought. A common approximation …</p>
+<h4 id="43-towards-a-theory-of-representation-learning-for-reinforcement-learning-2">43. <a href="https://scholar.google.com/scholar_url?url=https://smartech.gatech.edu/handle/1853/65363&amp;hl=en&amp;sa=X&amp;d=10424771458705037297&amp;ei=RbZfYYiiK8KSy9YPu-2n8AU&amp;scisig=AAGBfm3ikniPSa88LkLTBoxEkBUMpiKVEg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16893544014717538225:AAGBfm2Lx68K3PqmoqxML2edSMMU91RQng&amp;html=&amp;folt=rel">Towards a Theory of Representation Learning for Reinforcement Learning</a> (2)<a class="headerlink" href="#43-towards-a-theory-of-representation-learning-for-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: A Agarwal - 2021</em> <br>
+Provably sample-efficient reinforcement learning from rich observational inputs remains a key open challenge in research. While impressive recent advances have allowed the use of linear modelling while carrying out sample-efficient exploration …</p>
+<h4 id="44-learning-periodic-tasks-from-human-demonstrations-2">44. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14078&amp;hl=en&amp;sa=X&amp;d=15401969797877739741&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm2GJ0gk8MC2kPMNZQJKFZL_TeFtmg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">Learning Periodic Tasks from Human Demonstrations</a> (2)<a class="headerlink" href="#44-learning-periodic-tasks-from-human-demonstrations-2" title="Permanent link"></a></h4>
+<p><em>Authors: J Yang, J Zhang, C Settle, A Rai, R Antonova, J Bohg - arXiv preprint arXiv …, 2021</em> <br>
+We develop a method for learning periodic tasks from visual demonstrations. The core idea is to leverage periodicity in the policy structure to model periodic aspects of the tasks. We use active learning to optimize parameters of rhythmic dynamic …</p>
+<h4 id="45-the-convergence-rate-of-regularized-learning-in-games-from-bandits-and-uncertainty-to-optimism-and-beyond-2">45. <a href="https://scholar.google.com/scholar_url?url=https://hal.inria.fr/hal-03357715/document&amp;hl=en&amp;sa=X&amp;d=6959008547458308905&amp;ei=mXFcYb2MCdWR6rQPoZmruAk&amp;scisig=AAGBfm37ohiyChA79W9El2nM76bAPEJ4iQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:15363487302740458310:AAGBfm2wJj_2VmVQvZ-X8rbHeLr11xWYvA&amp;html=&amp;folt=rel">The convergence rate of regularized learning in games: From bandits and uncertainty to optimism and beyond</a> (2)<a class="headerlink" href="#45-the-convergence-rate-of-regularized-learning-in-games-from-bandits-and-uncertainty-to-optimism-and-beyond-2" title="Permanent link"></a></h4>
+<p><em>Authors: A Giannou, E Vlatakis-Gkaragkounis, P Mertikopoulos - NeurIPS 2021-35th …, 2021</em> <br>
+In this paper, we examine the convergence rate of a wide range of regularized methods for learning in games. To that end, we propose a unified algorithmic template that we call&rdquo; follow the generalized leader&rdquo;(FTGL), and which includes as …</p>
+<h4 id="46-improving-autonomous-navigation-by-self-supervised-environment-synthesis-2">46. <a href="https://scholar.google.com/scholar_url?url=https://www.cs.utexas.edu/~xiao/papers/ses.pdf&amp;hl=en&amp;sa=X&amp;d=9695401885246354754&amp;ei=mHFcYb2bNMuNywSZgbWADg&amp;scisig=AAGBfm0Cs7u8pn8TAbBHAMgMV-xJJjht6w&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:11280559324942125191:AAGBfm29fBcdrUC6UKv2SU_xuy_p-nxpdg&amp;html=&amp;folt=art">Improving Autonomous Navigation by Self-Supervised Environment Synthesis</a> (2)<a class="headerlink" href="#46-improving-autonomous-navigation-by-self-supervised-environment-synthesis-2" title="Permanent link"></a></h4>
+<p><em>Authors: Z Xu, A Nair, X Xiao, P Stone</em> <br>
+Machine learning approaches have recently enabled autonomous navigation for mobile robots in a data-driven manner. Since existing learning-based navigation systems are trained with data generated in specific training environments, during real …</p>
+<h4 id="47-decentralized-control-and-local-information-for-robust-and-adaptive-decentralized-deep-reinforcement-learning-2">47. <a href="https://scholar.google.com/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S0893608021003671&amp;hl=en&amp;sa=X&amp;d=18187053728879191771&amp;ei=mHFcYbHbJuOKywTUspQg&amp;scisig=AAGBfm0KrdW1EYvjLANSjqBowcDBMmB5Sw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7179431164517902851:AAGBfm1FBFMTtCuZByLmSms5k15XoBuIgg&amp;html=&amp;folt=rel">Decentralized control and local information for robust and adaptive decentralized Deep Reinforcement Learning</a> (2)<a class="headerlink" href="#47-decentralized-control-and-local-information-for-robust-and-adaptive-decentralized-deep-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: M Schilling, A Melnik, F Ohl, H Ritter, B Hammer - Neural Networks, 2021</em> <br>
+Decentralization is a central characteristic of biological motor control that allows for fast responses relying on local sensory information. In contrast, the current trend of Deep Reinforcement Learning (DRL) based approaches to motor control follows a …</p>
+<h4 id="48-multi-agent-transfer-reinforcement-learning-with-multi-view-encoder-for-adaptive-traffic-signal-control-2">48. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9556580/&amp;hl=en&amp;sa=X&amp;d=7039718381465365299&amp;ei=mHFcYfqvMIfBmQGX-6OoBg&amp;scisig=AAGBfm3BDHCbxzvbAHVZsVeK3HOkFGLy_g&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Multi-Agent Transfer Reinforcement Learning With Multi-View Encoder for Adaptive Traffic Signal Control</a> (2)<a class="headerlink" href="#48-multi-agent-transfer-reinforcement-learning-with-multi-view-encoder-for-adaptive-traffic-signal-control-2" title="Permanent link"></a></h4>
+<p><em>Authors: H Ge, D Gao, L Sun, Y Hou, C Yu, Y Wang, G Tan - IEEE Transactions on Intelligent …, 2021</em> <br>
+Multi-agent reinforcement learning (MARL) based methods for adaptive traffic signal control (ATSC) have shown promising potentials to solve the heavy traffic problems. The existing MARL methods adopt centralized or distributed strategies. The former …</p>
+<h4 id="49-coordinated-reinforcement-learning-for-optimizing-mobile-networks-2">49. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.15175&amp;hl=en&amp;sa=X&amp;d=4433634458085810059&amp;ei=mHFcYfqvMIfBmQGX-6OoBg&amp;scisig=AAGBfm0cmikOwIQXGqvwjR8QIFlR9w0jUg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Coordinated Reinforcement Learning for Optimizing Mobile Networks</a> (2)<a class="headerlink" href="#49-coordinated-reinforcement-learning-for-optimizing-mobile-networks-2" title="Permanent link"></a></h4>
+<p><em>Authors: M Bouton, H Farooq, J Forgeat, S Bothe, M Shirazipour… - arXiv preprint arXiv …, 2021</em> <br>
+Mobile networks are composed of many base stations and for each of them many parameters must be optimized to provide good services. Automatically and dynamically optimizing all these entities is challenging as they are sensitive to …</p>
+<h4 id="50-concave-utility-reinforcement-learning-with-zero-constraint-violations-2">50. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05439&amp;hl=en&amp;sa=X&amp;d=9862964388922404438&amp;ei=mHFcYdLkOILQyQTB27FY&amp;scisig=AAGBfm1iJDZSBevMar-vPj_KbvPuPvu1jg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">Concave Utility Reinforcement Learning with Zero-Constraint Violations</a> (2)<a class="headerlink" href="#50-concave-utility-reinforcement-learning-with-zero-constraint-violations-2" title="Permanent link"></a></h4>
+<p><em>Authors: M Agarwal, Q Bai, V Aggarwal - arXiv preprint arXiv:2109.05439, 2021</em> <br>
+We consider the problem of tabular infinite horizon concave utility reinforcement learning (CURL) with convex constraints. Various learning applications with constraints, such as robotics, do not allow for policies that can violate constraints. To …</p>
+<h4 id="51-a-two-time-scale-stochastic-optimization-framework-with-applications-in-control-and-reinforcement-learning-2">51. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14756&amp;hl=en&amp;sa=X&amp;d=12546011779544340771&amp;ei=mHFcYdLkOILQyQTB27FY&amp;scisig=AAGBfm1lU116vfDw1Vo906mBNQnCKpzNOw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">A Two-Time-Scale Stochastic Optimization Framework with Applications in Control and Reinforcement Learning</a> (2)<a class="headerlink" href="#51-a-two-time-scale-stochastic-optimization-framework-with-applications-in-control-and-reinforcement-learning-2" title="Permanent link"></a></h4>
+<p><em>Authors: S Zeng, TT Doan, J Romberg - arXiv preprint arXiv:2109.14756, 2021</em> <br>
+We study a novel two-time-scale stochastic gradient method for solving optimization problems where the gradient samples are generated from a time-varying Markov random process parameterized by the underlying optimization variable. These time …</p>
+<h4 id="52-mepg-a-minimalist-ensemble-policy-gradient-framework-for-deep-reinforcement-learning-1">52. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.10552&amp;hl=en&amp;sa=X&amp;d=15817844986039911536&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm2gfHL6fvc-qR1g6x_2jFb_uJ56CA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">MEPG: A Minimalist Ensemble Policy Gradient Framework for Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#52-mepg-a-minimalist-ensemble-policy-gradient-framework-for-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: Q He, C Gong, Y Qu, X Chen, X Hou, Y Liu - arXiv preprint arXiv:2109.10552, 2021</em> <br>
+Ensemble reinforcement learning (RL) aims to mitigate instability in Q-learning and to learn a robust policy, which introduces multiple value and policy functions. In this paper, we consider finding a novel but simple ensemble Deep RL algorithm to solve …</p>
+<h4 id="53-efficiently-training-on-policy-actor-critic-networks-in-robotic-deep-reinforcement-learning-with-demonstration-like-sampled-exploration-1">53. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.13005&amp;hl=en&amp;sa=X&amp;d=4154887567794206148&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm2a1RNNNvKBBPwuQMnmtUoAOxW7SA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">Efficiently Training On-Policy Actor-Critic Networks in Robotic Deep Reinforcement Learning with Demonstration-like Sampled Exploration</a> (1)<a class="headerlink" href="#53-efficiently-training-on-policy-actor-critic-networks-in-robotic-deep-reinforcement-learning-with-demonstration-like-sampled-exploration-1" title="Permanent link"></a></h4>
+<p><em>Authors: Z Chen, B Chen, S Xie, L Gong, C Liu, Z Zhang… - arXiv preprint arXiv …, 2021</em> <br>
+In complex environments with high dimension, training a reinforcement learning (RL) model from scratch often suffers from lengthy and tedious collection of agent-environment interactions. Instead, leveraging expert demonstration to guide RL …</p>
+<h4 id="54-a-survey-of-sim-to-real-transfer-techniques-applied-to-reinforcement-learning-for-bioinspired-robots-1">54. <a href="https://scholar.google.co.uk/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9552429/&amp;hl=en&amp;sa=X&amp;d=12820042863253096685&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm2fiAgrk8slhtM7SU6uNAYIHc6rIQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">A Survey of Sim-to-Real Transfer Techniques Applied to Reinforcement Learning for Bioinspired Robots</a> (1)<a class="headerlink" href="#54-a-survey-of-sim-to-real-transfer-techniques-applied-to-reinforcement-learning-for-bioinspired-robots-1" title="Permanent link"></a></h4>
+<p><em>Authors: W Zhu, X Guo, D Owaki, K Kutsuzawa, M Hayashibe - IEEE Transactions on Neural …, 2021</em> <br>
+The state-of-the-art reinforcement learning (RL) techniques have made innumerable advancements in robot control, especially in combination with deep neural networks (DNNs), known as deep reinforcement learning (DRL). In this article, instead of …</p>
+<h4 id="55-a-deep-reinforcement-learning-methods-based-on-deterministic-policy-gradient-for-multi-agent-cooperative-competition-1">55. <a href="https://scholar.google.co.uk/scholar_url?url=http://ceai.srait.ro/index.php%3Fjournal%3Dceai%26page%3Darticle%26op%3Ddownload%26path%255B%255D%3D6961%26path%255B%255D%3D1621&amp;hl=en&amp;sa=X&amp;d=10937854503247885978&amp;ei=RbZfYYjBFauXy9YP0suh8Aw&amp;scisig=AAGBfm20Cw6nfx1FQGS0PDreZSlKQOIyIA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">A Deep Reinforcement Learning Methods based on Deterministic Policy Gradient for Multi-Agent Cooperative Competition</a> (1)<a class="headerlink" href="#55-a-deep-reinforcement-learning-methods-based-on-deterministic-policy-gradient-for-multi-agent-cooperative-competition-1" title="Permanent link"></a></h4>
+<p><em>Authors: X Zuo - Journal of Control Engineering and Applied Informatics, 2021</em> <br>
+Deep reinforcement learning in multi-agent scenarios is important for real-world applications but presents challenges beyond those seen in single agent settings. This paper considers deterministic policy gradient algorithms for multi-agent control …</p>
+<h4 id="56-object-shell-reconstruction-camera-centric-object-representation-for-robotic-grasping-1">56. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.06837&amp;hl=en&amp;sa=X&amp;d=17139561963443591782&amp;ei=RbZfYbePHKPZsQKvo78o&amp;scisig=AAGBfm2MmlomzX6-5-t2k83GX830s06-Ng&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12129537905387702957:AAGBfm0Vo9yPXkpMiwin89_VZR4QGFWp6g&amp;html=&amp;folt=rel">Object Shell Reconstruction: Camera-centric Object Representation for Robotic Grasping</a> (1)<a class="headerlink" href="#56-object-shell-reconstruction-camera-centric-object-representation-for-robotic-grasping-1" title="Permanent link"></a></h4>
+<p><em>Authors: N Chavan-Dafle, S Popovych, S Agrawal, DD Lee… - arXiv preprint arXiv …, 2021</em> <br>
+Robots can effectively grasp and manipulate objects using their 3D models. In this paper, we propose a simple shape representation and a reconstruction method that outperforms state-of-the-art methods in terms of geometric metrics and enables grasp …</p>
+<h4 id="57-a-robot-cluster-for-reproducible-research-in-dexterous-manipulation-1">57. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.10957&amp;hl=en&amp;sa=X&amp;d=4673378475914483328&amp;ei=RbZfYaXBKYLQyQTB27FY&amp;scisig=AAGBfm3CruvUYi_aygTVO7wumADbS2FjFg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16097065438817006738:AAGBfm22QI-Sx-nZRMibQqPW8hmyvmARuw&amp;html=&amp;folt=rel">A Robot Cluster for Reproducible Research in Dexterous Manipulation</a> (1)<a class="headerlink" href="#57-a-robot-cluster-for-reproducible-research-in-dexterous-manipulation-1" title="Permanent link"></a></h4>
+<p><em>Authors: S Bauer, F Widmaier, M Wüthrich, N Funk, JU De Jesus… - arXiv preprint arXiv …, 2021</em> <br>
+Dexterous manipulation remains an open problem in robotics. To coordinate efforts of the research community towards tackling this problem, we propose a shared benchmark. We designed and built robotic platforms that are hosted at the MPI-IS …</p>
+<h4 id="58-optimal-control-via-combined-inference-and-numerical-optimization-1">58. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.11361&amp;hl=en&amp;sa=X&amp;d=13247217965691761362&amp;ei=RbZfYaXBKYLQyQTB27FY&amp;scisig=AAGBfm3P-BIPsfEqkTvrfwO9sUioxdhppw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16097065438817006738:AAGBfm22QI-Sx-nZRMibQqPW8hmyvmARuw&amp;html=&amp;folt=rel">Optimal Control via Combined Inference and Numerical Optimization</a> (1)<a class="headerlink" href="#58-optimal-control-via-combined-inference-and-numerical-optimization-1" title="Permanent link"></a></h4>
+<p><em>Authors: D Layeghi, S Tonneau, M Mistry - arXiv preprint arXiv:2109.11361, 2021</em> <br>
+Derivative based optimization methods are efficient at solving optimal control problems near local optima. However, their ability to converge halts when derivative information vanishes. The inference approach to optimal control does not have strict …</p>
+<h4 id="59-combining-task-and-motion-planning-using-policy-improvement-with-path-integrals-1">59. <a href="https://scholar.google.com/scholar_url?url=https://mediatum.ub.tum.de/1621721&amp;hl=en&amp;sa=X&amp;d=15726453785529337367&amp;ei=RbZfYaXBKYLQyQTB27FY&amp;scisig=AAGBfm0LNMwffshqIRA3gTYE4Pm2S3TcwA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16097065438817006738:AAGBfm22QI-Sx-nZRMibQqPW8hmyvmARuw&amp;html=&amp;folt=rel">Combining Task and Motion Planning using Policy Improvement with Path Integrals</a> (1)<a class="headerlink" href="#59-combining-task-and-motion-planning-using-policy-improvement-with-path-integrals-1" title="Permanent link"></a></h4>
+<p><em>Authors: D Urbaniak, A Agostini, D Lee - Humanoids 2020, 2021</em> <br>
+Task and motion planning deals with complex tasks that require a robot to automatically define and execute multi-step sequences of actions in cluttered scenarios. In this context, a linear motion is often not sufficient to approach a target …</p>
+<h4 id="60-dynamic-action-inference-with-recurrent-spiking-neural-networks-1">60. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-86383-8_19&amp;hl=en&amp;sa=X&amp;d=17012520243518581322&amp;ei=RbZfYaHWEpLSyQT4lJigBw&amp;scisig=AAGBfm2PQP6LsHS0oVk_SdDPuAstYowr4A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7161124710425188195:AAGBfm2JCPv3HFnfBmjexW8ADgg3PGMmbA&amp;html=&amp;folt=rel">Dynamic Action Inference with Recurrent Spiking Neural Networks</a> (1)<a class="headerlink" href="#60-dynamic-action-inference-with-recurrent-spiking-neural-networks-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Traub, MV Butz, R Legenstein, S Otte - International Conference on Artificial Neural …, 2021</em> <br>
+In this paper, we demonstrate that goal-directed behavior unfolds in recurrent spiking neural networks (RSNNs) when intentions are projected onto continuously progressing spike dynamics encoding the recent history of an agent&rsquo;s state. The …</p>
+<h4 id="61-radars-memory-efficient-reinforcement-learning-aided-differentiable-neural-architecture-search-1">61. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05691&amp;hl=en&amp;sa=X&amp;d=322575636241409536&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm1MaK9yxlsUSx5DVK4XuS4LVhvrow&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">RADARS: Memory Efficient Reinforcement Learning Aided Differentiable Neural Architecture Search</a> (1)<a class="headerlink" href="#61-radars-memory-efficient-reinforcement-learning-aided-differentiable-neural-architecture-search-1" title="Permanent link"></a></h4>
+<p><em>Authors: Z Yan, W Jiang, XS Hu, Y Shi - arXiv preprint arXiv:2109.05691, 2021</em> <br>
+Differentiable neural architecture search (DNAS) is known for its capacity in the automatic generation of superior neural networks. However, DNAS based methods suffer from memory usage explosion when the search space expands, which may …</p>
+<h4 id="62-privacy-preserving-multi-granular-federated-neural-architecture-search-a-general-framework-1">62. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9552481/&amp;hl=en&amp;sa=X&amp;d=16406115676839435745&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm2baAJOfw8HGB5WTD98HFNPs9suMw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Privacy-Preserving Multi-Granular Federated Neural Architecture Search A General Framework</a> (1)<a class="headerlink" href="#62-privacy-preserving-multi-granular-federated-neural-architecture-search-a-general-framework-1" title="Permanent link"></a></h4>
+<p><em>Authors: Z Pan, L Hu, W Tang, J Li, Y He, Z Liu - IEEE Transactions on Knowledge and Data …, 2021</em> <br>
+Jointly learning from multiple datasets can help building versatile intelligent systems yet may give rise to serious concerns of data privacy and model selection. Specifically, on the one hand, these datasets can be distributed at various local …</p>
+<h4 id="63-dynamic-memory-to-alleviate-catastrophic-forgetting-in-continual-learning-with-medical-imaging-1">63. <a href="https://scholar.google.com/scholar_url?url=https://www.nature.com/articles/s41467-021-25858-z&amp;hl=en&amp;sa=X&amp;d=16345497045449567371&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm2WkvJvw3cFS1zuYCWq1-ZoMU6C0g&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Dynamic memory to alleviate catastrophic forgetting in continual learning with medical imaging</a> (1)<a class="headerlink" href="#63-dynamic-memory-to-alleviate-catastrophic-forgetting-in-continual-learning-with-medical-imaging-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Perkonigg, J Hofmanninger, CJ Herold, JA Brink… - Nature Communications, 2021</em> <br>
+Medical imaging is a central part of clinical diagnosis and treatment guidance. Machine learning has increasingly gained relevance because it captures features of disease and treatment response that are relevant for therapeutic decision-making. In …</p>
+<h4 id="64-delve-into-the-performance-degradation-of-differentiable-architecture-search-1">64. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.13466&amp;hl=en&amp;sa=X&amp;d=13114984919318912963&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm0zvU6zBcS4c_f9iAjWsa68F8_hEg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Delve into the Performance Degradation of Differentiable Architecture Search</a> (1)<a class="headerlink" href="#64-delve-into-the-performance-degradation-of-differentiable-architecture-search-1" title="Permanent link"></a></h4>
+<p><em>Authors: J Zhang, Z Ding - arXiv preprint arXiv:2109.13466, 2021</em> <br>
+Differentiable architecture search (DARTS) is widely considered to be easy to overfit the validation set which leads to performance degradation. We first employ a series of exploratory experiments to verify that neither high-strength architecture parameters …</p>
+<h4 id="65-trust-region-policy-optimisation-in-multi-agent-reinforcement-learning-1">65. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.11251&amp;hl=en&amp;sa=X&amp;d=6957916250368924359&amp;ei=RbZfYcOEIIi5yQTj8oqgCg&amp;scisig=AAGBfm1dZFOcFfobBV00cogF3B_HkKwWZg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Trust Region Policy Optimisation in Multi-Agent Reinforcement Learning</a> (1)<a class="headerlink" href="#65-trust-region-policy-optimisation-in-multi-agent-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: JG Kuba, R Chen, M Wen, Y Wen, F Sun, J Wang… - arXiv preprint arXiv …, 2021</em> <br>
+Trust region methods rigorously enabled reinforcement learning (RL) agents to learn monotonically improving policies, leading to superior performance on a variety of tasks. Unfortunately, when it comes to multi-agent reinforcement learning (MARL) …</p>
+<h4 id="66-curiosity-driven-exploration-diversity-of-mechanisms-and-functions-1">66. <a href="https://scholar.google.com/scholar_url?url=https://psyarxiv.com/n2byt/download/%3Fformat%3Dpdf&amp;hl=en&amp;sa=X&amp;d=259711909583242397&amp;ei=RbZfYeitFKzcsQLo8o2gBg&amp;scisig=AAGBfm3phutO1enfub5-l4F8DapZrvw9iQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7179431164517902851:AAGBfm1FBFMTtCuZByLmSms5k15XoBuIgg&amp;html=&amp;folt=rel">Curiosity-driven exploration: Diversity of mechanisms and functions</a> (1)<a class="headerlink" href="#66-curiosity-driven-exploration-diversity-of-mechanisms-and-functions-1" title="Permanent link"></a></h4>
+<p><em>Authors: A Ten, PY Oudeyer, C Moulin-Frier - PsyArXiv. October, 2021</em> <br>
+Intrinsically motivated information-seeking, also called curiositydriven exploration, is widely believed to be a key ingredient for autonomous learning in the real world. Such forms of spontaneous exploration have been studied in multiple independent …</p>
+<h4 id="67-learning-to-tune-a-class-of-controllers-with-deep-reinforcement-learning-1">67. <a href="https://scholar.google.com/scholar_url?url=https://www.mdpi.com/2075-163X/11/9/989/htm&amp;hl=en&amp;sa=X&amp;d=10218646934265830682&amp;ei=RbZfYeitFKzcsQLo8o2gBg&amp;scisig=AAGBfm1CRBIsUCGIUEwCA64WlIx9J5pGZA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7179431164517902851:AAGBfm1FBFMTtCuZByLmSms5k15XoBuIgg&amp;html=&amp;folt=rel">Learning to Tune a Class of Controllers with Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#67-learning-to-tune-a-class-of-controllers-with-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: WJ Shipman - Minerals, 2021</em> <br>
+Control systems require maintenance in the form of tuning their parameters in order to maximize their performance in the face of process changes in minerals processing circuits. This work focuses on using deep reinforcement learning to train an agent to …</p>
+<h4 id="68-a-novel-ship-collision-avoidance-awareness-approach-for-cooperating-ships-using-multi-agent-deep-reinforcement-learning-1">68. <a href="https://scholar.google.com/scholar_url?url=https://www.mdpi.com/2077-1312/9/10/1056/pdf&amp;hl=en&amp;sa=X&amp;d=5896306500772475073&amp;ei=RbZfYeitFKzcsQLo8o2gBg&amp;scisig=AAGBfm0MGEgB-Uw5YFgqov1j4TAXJsltvg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7179431164517902851:AAGBfm1FBFMTtCuZByLmSms5k15XoBuIgg&amp;html=&amp;folt=rel">A Novel Ship Collision Avoidance Awareness Approach for Cooperating Ships Using Multi-Agent Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#68-a-novel-ship-collision-avoidance-awareness-approach-for-cooperating-ships-using-multi-agent-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: C Chen, F Ma, X Xu, Y Chen, J Wang - Journal of Marine Science and Engineering, 2021</em> <br>
+Ships are special machineries with large inertias and relatively weak driving forces. Simulating the manual operations of manipulating ships with artificial intelligence (AI) and machine learning techniques becomes more and more common, in which …</p>
+<h4 id="69-a-sharing-deep-reinforcement-learning-method-for-efficient-vehicle-platooning-control-1">69. <a href="https://scholar.google.com/scholar_url?url=https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/itr2.12120&amp;hl=en&amp;sa=X&amp;d=7024371438328107460&amp;ei=RbZfYeitFKzcsQLo8o2gBg&amp;scisig=AAGBfm3fLcJkRMUETdvm-CWg_ySC90mx0w&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7179431164517902851:AAGBfm1FBFMTtCuZByLmSms5k15XoBuIgg&amp;html=&amp;folt=rel">A sharing deep reinforcement learning method for efficient vehicle platooning control</a> (1)<a class="headerlink" href="#69-a-sharing-deep-reinforcement-learning-method-for-efficient-vehicle-platooning-control-1" title="Permanent link"></a></h4>
+<p><em>Authors: S Lu, Y Cai, L Chen, H Wang, X Sun, Y Jia - IET Intelligent Transport Systems</em> <br>
+The combination of reinforcement learning and platooning control has been widely studied, which has been considered to be altruistic on the basis of safety. However, the platooning control method based on reinforcement learning is not mature. This …</p>
+<h4 id="70-applying-and-improving-alphafold-at-casp14-1">70. <a href="https://scholar.google.co.uk/scholar_url?url=https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.26257&amp;hl=en&amp;sa=X&amp;d=4108606899461145723&amp;ei=RbZfYZ6dLIiKmgGPo4m4Bg&amp;scisig=AAGBfm1qoJM_839uog8eV2LiaPGWrkWEuA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:18164653477368462597:AAGBfm3zSMxChdLEZqrh49Z5b8_bsTpzKg&amp;html=&amp;folt=art">Applying and improving AlphaFold at CASP14</a> (1)<a class="headerlink" href="#70-applying-and-improving-alphafold-at-casp14-1" title="Permanent link"></a></h4>
+<p><em>Authors: J Jumper, R Evans, A Pritzel, T Green, M Figurnov… - Proteins: Structure, Function …, 2021</em> <br>
+We describe the operation and improvement of AlphaFold*, the system that was entered by the team AlphaFold2 to the “human” category in the 14th Critical Assessment of Protein Structure Prediction (CASP14). The AlphaFold system …</p>
+<h4 id="71-achieving-zero-constraint-violation-for-constrained-reinforcement-learning-via-primal-dual-approach-1">71. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.06332&amp;hl=en&amp;sa=X&amp;d=2163344532006807845&amp;ei=RbZfYeHOHY2oywTy66jAAQ&amp;scisig=AAGBfm3Ex3oT1k3vj1FYKfWvWGBRwQE67g&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">Achieving Zero Constraint Violation for Constrained Reinforcement Learning via Primal-Dual Approach</a> (1)<a class="headerlink" href="#71-achieving-zero-constraint-violation-for-constrained-reinforcement-learning-via-primal-dual-approach-1" title="Permanent link"></a></h4>
+<p><em>Authors: Q Bai, AS Bedi, M Agarwal, A Koppel, V Aggarwal - arXiv preprint arXiv:2109.06332, 2021</em> <br>
+Reinforcement learning is widely used in applications where one needs to perform sequential decisions while interacting with the environment. The problem becomes more challenging when the decision requirement includes satisfying some safety …</p>
+<h4 id="72-few-shot-unsupervised-continual-learning-through-meta-examples-supplementary-material-1">72. <a href="https://scholar.google.com/scholar_url?url=https://meta-learn.github.io/2020/papers/1_supplementary.pdf&amp;hl=en&amp;sa=X&amp;d=8316584931927841496&amp;ei=RbZfYeHOHY2oywTy66jAAQ&amp;scisig=AAGBfm10juy6mDsgXVOnKhj5kkXy-i13WQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">Few-Shot Unsupervised Continual Learning through Meta-Examples (Supplementary Material)</a> (1)<a class="headerlink" href="#72-few-shot-unsupervised-continual-learning-through-meta-examples-supplementary-material-1" title="Permanent link"></a></h4>
+<p><em>Authors: A Bertugli, S Vincenzi, S Calderara, A Passerini</em> <br>
+We also make some preliminary attempts on SlimageNet64 [1], a novel and difficult benchmark for few-shot continual learning. We make the embeddings using DeepCluster [2] and we report the obtained results in Table 1. We find that our …</p>
+<h4 id="73-parametric-computation-of-minimum-cost-flows-with-piecewise-quadratic-costs-1">73. <a href="https://scholar.google.co.th/scholar_url?url=https://pubsonline.informs.org/doi/abs/10.1287/moor.2021.1151&amp;hl=en&amp;sa=X&amp;d=13757154034527671885&amp;ei=RbZfYZL_JoaP6rQP1_asgAM&amp;scisig=AAGBfm2ELrlHb7DAbYZ6IeFBZcBNLYUGUA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:15171112644264959764:AAGBfm3YYkhaY_KWDxOiSCVbyQL925EEHQ&amp;html=&amp;folt=rel">Parametric computation of minimum-cost flows with piecewise quadratic costs</a> (1)<a class="headerlink" href="#73-parametric-computation-of-minimum-cost-flows-with-piecewise-quadratic-costs-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Klimm, P Warode - Mathematics of Operations Research, 2021</em> <br>
+We develop algorithms solving parametric flow problems with separable, continuous, piecewise quadratic, and strictly convex cost functions. The parameter to be considered is a common multiplier on the demand of all nodes. Our algorithms …</p>
+<h4 id="74-evolutionary-dynamics-of-zero-determinant-strategies-in-repeated-multiplayer-games-1">74. <a href="https://scholar.google.co.th/scholar_url?url=https://arxiv.org/pdf/2109.06405&amp;hl=en&amp;sa=X&amp;d=13848285634169371442&amp;ei=RbZfYZL_JoaP6rQP1_asgAM&amp;scisig=AAGBfm0kYhDr13jT1y6b8QWvnATyyMNbzg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:15171112644264959764:AAGBfm3YYkhaY_KWDxOiSCVbyQL925EEHQ&amp;html=&amp;folt=rel">Evolutionary dynamics of zero-determinant strategies in repeated multiplayer games</a> (1)<a class="headerlink" href="#74-evolutionary-dynamics-of-zero-determinant-strategies-in-repeated-multiplayer-games-1" title="Permanent link"></a></h4>
+<p><em>Authors: F Chen, T Wu, L Wang - arXiv preprint arXiv:2109.06405, 2021</em> <br>
+Since Press and Dyson&rsquo;s ingenious discovery of ZD (zero-determinant) strategy in the repeated Prisoner&rsquo;s Dilemma game, several studies have confirmed the existence of ZD strategy in repeated multiplayer social dilemmas. However, few …</p>
+<h4 id="75-empathetic-dialogue-generation-with-pre-trained-roberta-gpt2-and-external-knowledge-1">75. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.03004&amp;hl=en&amp;sa=X&amp;d=17451116328704545048&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm0ngM7aOS5_zKq5P-lc7Bg5pieGVA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Empathetic Dialogue Generation with Pre-trained RoBERTa-GPT2 and External Knowledge</a> (1)<a class="headerlink" href="#75-empathetic-dialogue-generation-with-pre-trained-roberta-gpt2-and-external-knowledge-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Liu, W Maier, W Minker, S Ultes - arXiv preprint arXiv:2109.03004, 2021</em> <br>
+One challenge for dialogue agents is to recognize feelings of the conversation partner and respond accordingly. In this work, RoBERTa-GPT2 is proposed for empathetic dialogue generation, where the pre-trained auto-encoding RoBERTa is …</p>
+<h4 id="76-fusing-task-oriented-and-open-domain-dialogues-in-conversational-agents-1">76. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04137&amp;hl=en&amp;sa=X&amp;d=17483736562508249944&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm1xAuhNIsKR4piIL3v9OFEfQztX7A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Fusing task-oriented and open-domain dialogues in conversational agents</a> (1)<a class="headerlink" href="#76-fusing-task-oriented-and-open-domain-dialogues-in-conversational-agents-1" title="Permanent link"></a></h4>
+<p><em>Authors: T Young, F Xing, V Pandelea, J Ni, E Cambria - arXiv preprint arXiv:2109.04137, 2021</em> <br>
+The goal of building intelligent dialogue systems has largely been\textit {separately} pursued under two paradigms: task-oriented dialogue (TOD) systems, which perform goal-oriented functions, and open-domain dialogue (ODD) systems, which focus on …</p>
+<h4 id="77-paraphrase-generation-as-unsupervised-machine-translation-1">77. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.02950&amp;hl=en&amp;sa=X&amp;d=5138567523621643244&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm28Vv88EhggAVHl1Xyw20oCEhrfOg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Paraphrase Generation as Unsupervised Machine Translation</a> (1)<a class="headerlink" href="#77-paraphrase-generation-as-unsupervised-machine-translation-1" title="Permanent link"></a></h4>
+<p><em>Authors: C Fan, Y Tian, Y Meng, N Peng, X Sun, F Wu, J Li - arXiv preprint arXiv:2109.02950, 2021</em> <br>
+In this paper, we propose a new paradigm for paraphrase generation by treating the task as unsupervised machine translation (UMT) based on the assumption that there must be pairs of sentences expressing the same meaning in a large-scale unlabeled …</p>
+<h4 id="78-comparing-contextual-and-static-word-embeddings-with-small-data-1">78. <a href="https://scholar.google.com/scholar_url?url=https://aclanthology.org/2021.konvens-1.27.pdf&amp;hl=en&amp;sa=X&amp;d=13249658523153290849&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm0Xeh0MzHU5acxDzrQn8gEJ9oN7KQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Comparing Contextual and Static Word Embeddings with Small Data</a> (1)<a class="headerlink" href="#78-comparing-contextual-and-static-word-embeddings-with-small-data-1" title="Permanent link"></a></h4>
+<p><em>Authors: W Zhou, J Bloem - Proceedings of the 17th Conference on Natural …, 2021</em> <br>
+For domain-specific NLP tasks, applying word embeddings trained on general corpora is not optimal. Meanwhile, training domain-specific word representations poses challenges to dataset construction and embedding evaluation. In this paper …</p>
+<h4 id="79-rethinking-zero-shot-neural-machine-translation-from-a-perspective-of-latent-variables-1">79. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04705&amp;hl=en&amp;sa=X&amp;d=7694480525290126570&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm0y29g9cOyoqpSEJDrM6Od6kcSiBQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Rethinking Zero-shot Neural Machine Translation: From a Perspective of Latent Variables</a> (1)<a class="headerlink" href="#79-rethinking-zero-shot-neural-machine-translation-from-a-perspective-of-latent-variables-1" title="Permanent link"></a></h4>
+<p><em>Authors: W Wang, Z Zhang, Y Du, B Chen, J Xie, W Luo - arXiv preprint arXiv:2109.04705, 2021</em> <br>
+Zero-shot translation, directly translating between language pairs unseen in training, is a promising capability of multilingual neural machine translation (NMT). However, it usually suffers from capturing spurious correlations between the output language …</p>
+<h4 id="80-knowledge-enhanced-fine-tuning-for-better-handling-unseen-entities-in-dialogue-generation-1">80. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05487&amp;hl=en&amp;sa=X&amp;d=9391120933635851624&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm2jp6VL7X4sxqHqbfTn-eruxtep8A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Knowledge Enhanced Fine-Tuning for Better Handling Unseen Entities in Dialogue Generation</a> (1)<a class="headerlink" href="#80-knowledge-enhanced-fine-tuning-for-better-handling-unseen-entities-in-dialogue-generation-1" title="Permanent link"></a></h4>
+<p><em>Authors: L Cui, Y Wu, S Liu, Y Zhang - arXiv preprint arXiv:2109.05487, 2021</em> <br>
+Although pre-training models have achieved great success in dialogue generation, their performance drops dramatically when the input contains an entity that does not appear in pre-training and fine-tuning datasets (unseen entity). To address this issue …</p>
+<h4 id="81-competence-based-curriculum-learning-for-multilingual-machine-translation-1">81. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04002&amp;hl=en&amp;sa=X&amp;d=5768613869324459648&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm0DDK6-FzDS0aqn6Ld2Xl_4S_Eq8A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Competence-based Curriculum Learning for Multilingual Machine Translation</a> (1)<a class="headerlink" href="#81-competence-based-curriculum-learning-for-multilingual-machine-translation-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Zhang, F Meng, Y Tong, J Zhou - arXiv preprint arXiv:2109.04002, 2021</em> <br>
+Currently, multilingual machine translation is receiving more and more attention since it brings better performance for low resource languages (LRLs) and saves more space. However, existing multilingual machine translation models face a …</p>
+<h4 id="82-naturalness-evaluation-of-natural-language-generation-in-task-oriented-dialogues-using-bert-1">82. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.02938&amp;hl=en&amp;sa=X&amp;d=16187210162569721303&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm2raoi0UbbNDY25sDf3pM66QjPAAA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Naturalness Evaluation of Natural Language Generation in Task-oriented Dialogues using BERT</a> (1)<a class="headerlink" href="#82-naturalness-evaluation-of-natural-language-generation-in-task-oriented-dialogues-using-bert-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Liu, W Maier, W Minker, S Ultes - arXiv preprint arXiv:2109.02938, 2021</em> <br>
+This paper presents an automatic method to evaluate the naturalness of natural language generation in dialogue systems. While this task was previously rendered through expensive and time-consuming human labor, we present this novel task of …</p>
+<h4 id="83-distributionally-robust-multilingual-machine-translation-1">83. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04020&amp;hl=en&amp;sa=X&amp;d=9941645985335492184&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm0JKkMwLi9hfXQbPYAGIWWPVZSAzg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Distributionally Robust Multilingual Machine Translation</a> (1)<a class="headerlink" href="#83-distributionally-robust-multilingual-machine-translation-1" title="Permanent link"></a></h4>
+<p><em>Authors: C Zhou, D Levy, X Li, M Ghazvininejad, G Neubig - arXiv preprint arXiv:2109.04020, 2021</em> <br>
+Multilingual neural machine translation (MNMT) learns to translate multiple language pairs with a single model, potentially improving both the accuracy and the memory-efficiency of deployed models. However, the heavy data imbalance between …</p>
+<h4 id="84-revisiting-context-choices-for-context-aware-machine-translation-1">84. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.02995&amp;hl=en&amp;sa=X&amp;d=10130786663532748098&amp;ei=RbZfYcfEC4iKmgGPo4m4Bg&amp;scisig=AAGBfm3JQZ9e6Z8y_uWGV52-iYm_ny92PA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Revisiting Context Choices for Context-aware Machine Translation</a> (1)<a class="headerlink" href="#84-revisiting-context-choices-for-context-aware-machine-translation-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Rikters, T Nakazawa - arXiv preprint arXiv:2109.02995, 2021</em> <br>
+One of the most popular methods for context-aware machine translation (MT) is to use separate encoders for the source sentence and context as multiple sources for one target sentence. Recent work has cast doubt on whether these models actually …</p>
+<h4 id="85-joint-communication-and-motion-planning-for-cobots-1">85. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14004&amp;hl=en&amp;sa=X&amp;d=3647950941363704764&amp;ei=RbZfYfG3EKSK6rQP7_qhuA4&amp;scisig=AAGBfm3StvpD03fTw5IuoV_OTfXPeuZh1Q&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7075396416332708986:AAGBfm2ikwDLRO1om_kwNYRFfORapex4mg&amp;html=&amp;folt=rel">Joint Communication and Motion Planning for Cobots</a> (1)<a class="headerlink" href="#85-joint-communication-and-motion-planning-for-cobots-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Dadvar, K Majd, E Oikonomou, G Fainekos… - arXiv preprint arXiv …, 2021</em> <br>
+The increasing deployment of robots in co-working scenarios with humans has revealed complex safety and efficiency challenges in the computation robot behavior. Movement among humans is one of the most fundamental&ndash;and yet critical …</p>
+<h4 id="86-safe-control-gym-a-unified-benchmark-suite-for-safe-learning-based-control-and-reinforcement-learning-1">86. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.06325&amp;hl=en&amp;sa=X&amp;d=2306925404889814517&amp;ei=RbZfYfG3EKSK6rQP7_qhuA4&amp;scisig=AAGBfm2DvYji13G5ZsTBJI6KLitLwip-Kg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7075396416332708986:AAGBfm2ikwDLRO1om_kwNYRFfORapex4mg&amp;html=&amp;folt=rel">safe-control-gym: a Unified Benchmark Suite for Safe Learning-based Control and Reinforcement Learning</a> (1)<a class="headerlink" href="#86-safe-control-gym-a-unified-benchmark-suite-for-safe-learning-based-control-and-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: Z Yuan, AW Hall, S Zhou, L Brunke, M Greeff… - arXiv preprint arXiv …, 2021</em> <br>
+In recent years, reinforcement learning and learning-based control&ndash;as well as the study of their safety, crucial for deployment in real-world robots&ndash;have gained significant traction. However, to adequately gauge the progress and applicability of …</p>
+<h4 id="87-comparison-of-end-to-end-continuous-and-discrete-motion-planners-for-autonomous-mobile-robots-1">87. <a href="https://scholar.google.com/scholar_url?url=http://www.mech.utsunomiya-u.ac.jp/~hosino/member/hosino/pub/papers/hosino-sice20-0110.pdf&amp;hl=en&amp;sa=X&amp;d=7363700971257088057&amp;ei=RbZfYfG3EKSK6rQP7_qhuA4&amp;scisig=AAGBfm2ij3YAyrPfR5ghmUdmUw6AbAXYhg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7075396416332708986:AAGBfm2ikwDLRO1om_kwNYRFfORapex4mg&amp;html=&amp;folt=rel">Comparison of End-to-End Continuous and Discrete Motion Planners for Autonomous Mobile Robots</a> (1)<a class="headerlink" href="#87-comparison-of-end-to-end-continuous-and-discrete-motion-planners-for-autonomous-mobile-robots-1" title="Permanent link"></a></h4>
+<p><em>Authors: S HOSHINO, J SUMIYOSHI</em> <br>
+For autonomous navigation of mobile robots, obstacle avoidance capability and straight-line stability are essential performance. Robots are required to move with suitable control values regarding velocity and angular velocity. Therefore, we have …</p>
+<h4 id="88-learning-selective-communication-for-multi-agent-path-finding-1">88. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05413&amp;hl=en&amp;sa=X&amp;d=2794538764693110369&amp;ei=RbZfYaelGdWR6rQPoZmruAk&amp;scisig=AAGBfm15YPm3to1g2qbCnRwOZ1eVF3DKtA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Learning Selective Communication for Multi-Agent Path Finding</a> (1)<a class="headerlink" href="#88-learning-selective-communication-for-multi-agent-path-finding-1" title="Permanent link"></a></h4>
+<p><em>Authors: Z Ma, Y Luo, J Pan - arXiv preprint arXiv:2109.05413, 2021</em> <br>
+Learning communication via deep reinforcement learning (RL) or imitation learning (IL) has recently been shown to be an effective way to solve Multi-Agent Path Finding (MAPF). However, existing communication based MAPF solvers focus on broadcast …</p>
+<h4 id="89-multi-agent-deep-reinforcement-learning-method-for-ev-charging-station-game-1">89. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9536423/&amp;hl=en&amp;sa=X&amp;d=15967784301423393052&amp;ei=RbZfYaelGdWR6rQPoZmruAk&amp;scisig=AAGBfm2VFuiJP4YrCcZixvpUlEGmJExBGw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Multi-Agent Deep Reinforcement Learning Method for EV Charging Station Game</a> (1)<a class="headerlink" href="#89-multi-agent-deep-reinforcement-learning-method-for-ev-charging-station-game-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Shahidehpour, T Qian, C Shao, X Li, X Wang… - IEEE Transactions on Power …, 2021</em> <br>
+The ongoing quest for transportation electrification with the massive proliferation of EV charging stations (EVCSs) will deepen the interaction and require the further coordination of coupled power and transportation networks (PTN). The individually …</p>
+<h4 id="90-reinforcement-learning-on-encrypted-data-1">90. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.08236&amp;hl=en&amp;sa=X&amp;d=2972858911234526676&amp;ei=RbZfYaelGdWR6rQPoZmruAk&amp;scisig=AAGBfm1Baqy9ztirygiQI_fFXah0VRzASA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Reinforcement Learning on Encrypted Data</a> (1)<a class="headerlink" href="#90-reinforcement-learning-on-encrypted-data-1" title="Permanent link"></a></h4>
+<p><em>Authors: A Jesu, VA Darvariu, A Staffolani, R Montanari… - arXiv preprint arXiv …, 2021</em> <br>
+The growing number of applications of Reinforcement Learning (RL) in real-world domains has led to the development of privacy-preserving techniques due to the inherently sensitive nature of data. Most existing works focus on differential privacy …</p>
+<h4 id="91-semi-supervised-imitation-learning-with-mixed-qualities-of-demonstrations-for-autonomous-driving-1">91. <a href="https://scholar.google.co.in/scholar_url?url=https://arxiv.org/pdf/2109.11280&amp;hl=en&amp;sa=X&amp;d=14604988098239839342&amp;ei=RbZfYYK1JYnmmgGQla6wAw&amp;scisig=AAGBfm0HN1hxpmXVzF-qdoiZ_Y-TGbWMZA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:14565562134169474396:AAGBfm39hgJdm_pR5ngxvCckS5694mOkbQ&amp;html=&amp;folt=rel">Semi-Supervised Imitation Learning with Mixed Qualities of Demonstrations for Autonomous Driving</a> (1)<a class="headerlink" href="#91-semi-supervised-imitation-learning-with-mixed-qualities-of-demonstrations-for-autonomous-driving-1" title="Permanent link"></a></h4>
+<p><em>Authors: G Lee, W Oh, S Shin, D Kim, J Oh, J Jeong, S Choi… - arXiv preprint arXiv …, 2021</em> <br>
+In this paper, we consider the problem of autonomous driving using imitation learning in a semi-supervised manner. In particular, both labeled and unlabeled demonstrations are leveraged during training by estimating the quality of each …</p>
+<h4 id="92-a-deep-reinforcement-learning-approach-for-constrained-online-logistics-route-assignment-1">92. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.03467&amp;hl=en&amp;sa=X&amp;d=8772958449123973728&amp;ei=RbZfYYvTIoWM6rQPo_eDyAg&amp;scisig=AAGBfm3VsHJjkGEwe-SfAQ-PnOP54q7Pbw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">A Deep Reinforcement Learning Approach for Constrained Online Logistics Route Assignment</a> (1)<a class="headerlink" href="#92-a-deep-reinforcement-learning-approach-for-constrained-online-logistics-route-assignment-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Zeng, Y Liu, D Zhang, K Han, H Hu - arXiv preprint arXiv:2109.03467, 2021</em> <br>
+As online shopping prevails and e-commerce platforms emerge, there is a tremendous number of parcels being transported every day. Thus, it is crucial for the logistics industry on how to assign a candidate logistics route for each shipping …</p>
+<h4 id="93-deep-reinforcement-learning-for-solving-the-heterogeneous-capacitated-vehicle-routing-problem-1">93. <a href="https://scholar.google.com/scholar_url?url=https://www.researchgate.net/profile/Yi-Ning-Ma-2/publication/354354946_Deep_Reinforcement_Learning_for_Solving_the_Heterogeneous_Capacitated_Vehicle_Routing_Problem/links/613f264f4e1df27106320cd2/Deep-Reinforcement-Learning-for-Solving-the-Heterogeneous-Capacitated-Vehicle-Routing-Problem.pdf&amp;hl=en&amp;sa=X&amp;d=2271191002952994508&amp;ei=RbZfYYvTIoWM6rQPo_eDyAg&amp;scisig=AAGBfm09CcUHzIJNbbjPP--FLsuPKreIpQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">Deep Reinforcement Learning for Solving the Heterogeneous Capacitated Vehicle Routing Problem</a> (1)<a class="headerlink" href="#93-deep-reinforcement-learning-for-solving-the-heterogeneous-capacitated-vehicle-routing-problem-1" title="Permanent link"></a></h4>
+<p><em>Authors: J Li, Y Ma, R Gao, Z Cao, A Lim, W Song, J Zhang - IEEE Transactions on Cybernetics, 2021</em> <br>
+Existing deep reinforcement learning (DRL)-based methods for solving the capacitated vehicle routing problem (CVRP) intrinsically cope with a homogeneous vehicle fleet, in which the fleet is assumed as repetitions of a single vehicle. Hence …</p>
+<h4 id="94-reinforcement-learning-with-evolutionary-trajectory-generator-a-general-approach-for-quadrupedal-locomotion-1">94. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.06409&amp;hl=en&amp;sa=X&amp;d=9618616450492425133&amp;ei=RbZfYcb-BcKSy9YPu-2n8AU&amp;scisig=AAGBfm2RB9KeaY2TUJ--yVwsteYHv25OHQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:942002207151750780:AAGBfm354y2cW38IF4_kKp4qgExZPC4Low&amp;html=&amp;folt=rel">Reinforcement Learning with Evolutionary Trajectory Generator: A General Approach for Quadrupedal Locomotion</a> (1)<a class="headerlink" href="#94-reinforcement-learning-with-evolutionary-trajectory-generator-a-general-approach-for-quadrupedal-locomotion-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Shi, B Zhou, H Zeng, F Wang, Y Dong, J Li, K Wang… - arXiv preprint arXiv …, 2021</em> <br>
+Recently reinforcement learning (RL) has emerged as a promising approach for quadrupedal locomotion, which can save the manual effort in conventional approaches such as designing skill-specific controllers. However, due to the complex …</p>
+<h4 id="95-hail-modular-agent-based-pedestrian-imitation-learning-1">95. <a href="https://scholar.google.com/scholar_url?url=https://books.google.com/books%3Fhl%3Den%26lr%3Dlang_en%26id%3D48FEEAAAQBAJ%26oi%3Dfnd%26pg%3DPA27%26ots%3DcvNt0PtCNw%26sig%3DzQ3ynRZnIBlrTg0PQBxEJsYSe4U&amp;hl=en&amp;sa=X&amp;d=7145980100512775469&amp;ei=RbZfYcb-BcKSy9YPu-2n8AU&amp;scisig=AAGBfm3eO8Sj5bpG_a74hYN0yestsyd8Ew&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:942002207151750780:AAGBfm354y2cW38IF4_kKp4qgExZPC4Low&amp;html=&amp;folt=rel">HAIL: Modular Agent-Based Pedestrian Imitation Learning</a> (1)<a class="headerlink" href="#95-hail-modular-agent-based-pedestrian-imitation-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: C Müller - Advances in Practical Applications of Agents, Multi …</em> <br>
+In the area of autonomous driving there is a need to flexibly configure and simulate more complex individual pedestrian behavior in critical traffic scenes which goes beyond predefined behavior simulation. This paper presents a novel human …</p>
+<h4 id="96-text-is-not-enough-integrating-visual-impressions-intoopen-domain-dialogue-generation-1">96. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05778&amp;hl=en&amp;sa=X&amp;d=16532743908724427116&amp;ei=RbZfYfjiCYaP6rQP1_asgAM&amp;scisig=AAGBfm2GLGY-1uPUWKhfRfxvkGq3VT3TgA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Text is NOT Enough: Integrating Visual Impressions intoOpen-domain Dialogue Generation</a> (1)<a class="headerlink" href="#96-text-is-not-enough-integrating-visual-impressions-intoopen-domain-dialogue-generation-1" title="Permanent link"></a></h4>
+<p><em>Authors: L Shen, H Zhan, X Shen, Y Song, X Zhao - arXiv preprint arXiv:2109.05778, 2021</em> <br>
+Open-domain dialogue generation in natural language processing (NLP) is by default a pure-language task, which aims to satisfy human need for daily communication on open-ended topics by producing related and informative …</p>
+<h4 id="97-from-adaptive-locomotion-to-predictive-action-selectioncognitive-control-for-a-six-legged-walker-1">97. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/iel7/8860/4359257/09543505.pdf&amp;hl=en&amp;sa=X&amp;d=13126406968190162563&amp;ei=RbZfYdXAB4WM6rQPo_eDyAg&amp;scisig=AAGBfm0Ev2ojlrSPzAgOXBkPupW4w1jRig&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:2463707670919271215:AAGBfm0dFCIMzWhbHZoQeKDlSdhoisxuiQ&amp;html=&amp;folt=rel">From Adaptive Locomotion to Predictive Action Selection–Cognitive Control for a Six-Legged Walker</a> (1)<a class="headerlink" href="#97-from-adaptive-locomotion-to-predictive-action-selectioncognitive-control-for-a-six-legged-walker-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Schilling, J Paskarbeit, H Ritter, A Schneider… - IEEE Transactions on …, 2021</em> <br>
+Locomotion in animals provides a model for adaptive behavior as it is able to deal with various kinds of perturbations. Work in insects suggests that this evolved flexibility results from a modular architecture, which can be characterized by a …</p>
+<h4 id="98-uncertainty-aware-self-improving-framework-for-depth-estimation-1">98. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9552471/&amp;hl=en&amp;sa=X&amp;d=7090135549754533612&amp;ei=RbZfYdXAB4WM6rQPo_eDyAg&amp;scisig=AAGBfm0_JGt8Pc9jvDT2WOygw1PYt33Qqw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:2463707670919271215:AAGBfm0dFCIMzWhbHZoQeKDlSdhoisxuiQ&amp;html=&amp;folt=rel">Uncertainty-Aware Self-Improving Framework for Depth Estimation</a> (1)<a class="headerlink" href="#98-uncertainty-aware-self-improving-framework-for-depth-estimation-1" title="Permanent link"></a></h4>
+<p><em>Authors: X Nie, D Shi, R Li, Z Liu, X Chen - IEEE Robotics and Automation Letters, 2021</em> <br>
+In recent years, self-supervised paradigms for depth estimation have drawn lots of attention from the community. Promising as they are, in order to achieve wider application and better performance, reasoning about the uncertainty of the estimated …</p>
+<h4 id="99-reduce-the-difficulty-of-incremental-learning-with-self-supervised-learning-1">99. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/iel7/6287639/9312710/09537773.pdf&amp;hl=en&amp;sa=X&amp;d=16603217839404542034&amp;ei=RbZfYdXAB4WM6rQPo_eDyAg&amp;scisig=AAGBfm28kFAMUEks4nq-aLaw69ZWERlgZA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:2463707670919271215:AAGBfm0dFCIMzWhbHZoQeKDlSdhoisxuiQ&amp;html=&amp;folt=rel">Reduce the Difficulty of Incremental Learning with Self-Supervised Learning</a> (1)<a class="headerlink" href="#99-reduce-the-difficulty-of-incremental-learning-with-self-supervised-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: L Guan, Y Wu - IEEE Access, 2021</em> <br>
+Incremental learning requires the model to learn new tasks without forgetting the learned tasks continuously. However, when the deep learning model learns new tasks, it will catastrophically forget the tasks it has learned before. Researchers have …</p>
+<h4 id="100-disentangled-and-controllable-sketch-creation-based-on-disentangling-the-structure-and-color-enhancement-1">100. <a href="https://scholar.google.com/scholar_url?url=https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/ipr2.12343&amp;hl=en&amp;sa=X&amp;d=17806006131590646095&amp;ei=RbZfYYiiK8KSy9YPu-2n8AU&amp;scisig=AAGBfm2LLQTCwwf1JiD5eArJyrHKj_JkYA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16893544014717538225:AAGBfm2Lx68K3PqmoqxML2edSMMU91RQng&amp;html=&amp;folt=rel">Disentangled and controllable sketch creation based on disentangling the structure and color enhancement</a> (1)<a class="headerlink" href="#100-disentangled-and-controllable-sketch-creation-based-on-disentangling-the-structure-and-color-enhancement-1" title="Permanent link"></a></h4>
+<p><em>Authors: N Gao, H Ren, J Li, ZB Su - IET Image Processing</em> <br>
+Existing sketch‐based image processing methods include sketch recognition, sketch synthesis and sketch‐based image retrieval. For sketch creation, a meaningful task is proposed namely disentangled and controllable sketch creation (DCSC) based on …</p>
+<h4 id="101-hyar-addressing-discrete-continuous-action-reinforcement-learning-via-hybrid-action-representation-1">101. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05490&amp;hl=en&amp;sa=X&amp;d=3712433755498095777&amp;ei=RbZfYYiiK8KSy9YPu-2n8AU&amp;scisig=AAGBfm337brh5qkxIPu_6mm-RoxpaSIJRQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16893544014717538225:AAGBfm2Lx68K3PqmoqxML2edSMMU91RQng&amp;html=&amp;folt=rel">HyAR: Addressing Discrete-Continuous Action Reinforcement Learning via Hybrid Action Representation</a> (1)<a class="headerlink" href="#101-hyar-addressing-discrete-continuous-action-reinforcement-learning-via-hybrid-action-representation-1" title="Permanent link"></a></h4>
+<p><em>Authors: B Li, H Tang, Y Zheng, J Hao, P Li, Z Wang, Z Meng… - arXiv preprint arXiv …, 2021</em> <br>
+Discrete-continuous hybrid action space is a natural setting in many practical problems, such as robot control and game AI. However, most previous Reinforcement Learning (RL) works only demonstrate the success in controlling with …</p>
+<h4 id="102-hlic-harmonizing-optimization-metrics-in-learned-image-compression-by-reinforcement-learning-1">102. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14863&amp;hl=en&amp;sa=X&amp;d=3409455219795061845&amp;ei=RbZfYYiiK8KSy9YPu-2n8AU&amp;scisig=AAGBfm1Oi1kjLhmWceR9owhZpBsI2tIk-A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16893544014717538225:AAGBfm2Lx68K3PqmoqxML2edSMMU91RQng&amp;html=&amp;folt=rel">HLIC: Harmonizing Optimization Metrics in Learned Image Compression by Reinforcement Learning</a> (1)<a class="headerlink" href="#102-hlic-harmonizing-optimization-metrics-in-learned-image-compression-by-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: B Sun, M Gu, D He, T Xu, Y Wang, H Qin - arXiv preprint arXiv:2109.14863, 2021</em> <br>
+Learned image compression is making good progress in recent years. Peak signal-to-noise ratio (PSNR) and multi-scale structural similarity (MS-SSIM) are the two most popular evaluation metrics. As different metrics only reflect certain aspects of human …</p>
+<h4 id="103-where-did-you-learn-that-from-surprising-effectiveness-of-membership-inference-attacks-against-temporally-correlated-data-in-deep-reinforcement-learning-1">103. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.03975&amp;hl=en&amp;sa=X&amp;d=4949835386510321725&amp;ei=RbZfYeWUG4LemgHVs5GYDg&amp;scisig=AAGBfm3dijM3VsnCcWXHBR95ttQ0gysLoQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:10831605143347168217:AAGBfm2PoYUR_IAlB8SGxyK-vc4DT3v44g&amp;html=&amp;folt=rel">Where Did You Learn That From? Surprising Effectiveness of Membership Inference Attacks Against Temporally Correlated Data in Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#103-where-did-you-learn-that-from-surprising-effectiveness-of-membership-inference-attacks-against-temporally-correlated-data-in-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Gomrokchi, S Amin, H Aboutalebi, A Wong, D Precup - arXiv preprint arXiv …, 2021</em> <br>
+While significant research advances have been made in the field of deep reinforcement learning, a major challenge to widespread industrial adoption of deep reinforcement learning that has recently surfaced but little explored is the potential …</p>
+<h4 id="104-carl-lead-lidar-based-end-to-end-autonomous-driving-with-contrastive-deep-reinforcement-learning-1">104. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.08473&amp;hl=en&amp;sa=X&amp;d=14663695745222740824&amp;ei=RbZfYeWUG4LemgHVs5GYDg&amp;scisig=AAGBfm1nHprFwI3f75IwbgbFPp37Um8Etw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:10831605143347168217:AAGBfm2PoYUR_IAlB8SGxyK-vc4DT3v44g&amp;html=&amp;folt=rel">Carl-Lead: Lidar-based End-to-End Autonomous Driving with Contrastive Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#104-carl-lead-lidar-based-end-to-end-autonomous-driving-with-contrastive-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: P Cai, S Wang, H Wang, M Liu - arXiv preprint arXiv:2109.08473, 2021</em> <br>
+Autonomous driving in urban crowds at unregulated intersections is challenging, where dynamic occlusions and uncertain behaviors of other vehicles should be carefully considered. Traditional methods are heuristic and based on hand …</p>
+<h4 id="105-accelerating-offline-reinforcement-learning-application-in-real-time-bidding-and-recommendation-potential-use-of-simulation-1">105. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.08331&amp;hl=en&amp;sa=X&amp;d=8018173532123306983&amp;ei=RbZfYeWUG4LemgHVs5GYDg&amp;scisig=AAGBfm2kExkxnT7MjBti2vovk1w2qlUnJg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:10831605143347168217:AAGBfm2PoYUR_IAlB8SGxyK-vc4DT3v44g&amp;html=&amp;folt=rel">Accelerating Offline Reinforcement Learning Application in Real-Time Bidding and Recommendation: Potential Use of Simulation</a> (1)<a class="headerlink" href="#105-accelerating-offline-reinforcement-learning-application-in-real-time-bidding-and-recommendation-potential-use-of-simulation-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Kiyohara, K Kawakami, Y Saito - arXiv preprint arXiv:2109.08331, 2021</em> <br>
+In recommender systems (RecSys) and real-time bidding (RTB) for online advertisements, we often try to optimize sequential decision making using bandit and reinforcement learning (RL) techniques. In these applications, offline reinforcement …</p>
+<h4 id="106-privacy-preserving-gradient-descent-for-distributed-genome-wide-analysis-1">106. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-88428-4_20&amp;hl=en&amp;sa=X&amp;d=8308877144727220817&amp;ei=RbZfYeWUG4LemgHVs5GYDg&amp;scisig=AAGBfm34AQiodPR3FBe6yXrz06KXgcMhUA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:10831605143347168217:AAGBfm2PoYUR_IAlB8SGxyK-vc4DT3v44g&amp;html=&amp;folt=rel">Privacy-Preserving Gradient Descent for Distributed Genome-Wide Analysis</a> (1)<a class="headerlink" href="#106-privacy-preserving-gradient-descent-for-distributed-genome-wide-analysis-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Zhang, G Bai, X Li, C Curtis, C Chen, RKL Ko - European Symposium on Research …, 2021</em> <br>
+Genome-wide analysis, which provides perceptive insights into complex diseases, plays an important role in biomedical data analytics. It usually involves large-scale human genomic data, and thus may disclose sensitive information about individuals …</p>
+<h4 id="107-unified-curiosity-driven-learning-with-smoothed-intrinsic-reward-estimation-1">107. <a href="https://scholar.google.fr/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S003132032100532X&amp;hl=en&amp;sa=X&amp;d=6272896258643574054&amp;ei=RbZfYfegDoLQyQTB27FY&amp;scisig=AAGBfm2FU-knLYGhODwxY1KsVGZt0K6w-Q&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7032476210231589458:AAGBfm0NfgjsZqBDtw-M4HvOeev8ahDuPg&amp;html=&amp;folt=rel">Unified Curiosity-Driven Learning with Smoothed Intrinsic Reward Estimation</a> (1)<a class="headerlink" href="#107-unified-curiosity-driven-learning-with-smoothed-intrinsic-reward-estimation-1" title="Permanent link"></a></h4>
+<p><em>Authors: F Huang, W Li, J Cui, Y Fu, X Li - Pattern Recognition, 2021</em> <br>
+In reinforcement learning (RL), the intrinsic reward estimation is necessary for policy learning when the extrinsic reward is sparse or absent. To this end, Unified Curiosity-driven Learning with Smoothed intrinsic reward Estimation (UCLSE) is proposed to …</p>
+<h4 id="108-an-offline-deep-reinforcement-learning-for-maintenance-decision-making-1">108. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.15050&amp;hl=en&amp;sa=X&amp;d=11395175476911669505&amp;ei=mHFcYYmIH4KNmwHokry4Dw&amp;scisig=AAGBfm06NJEFBtTl2LdBx0IBtAVR-emNQw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5758469387544328234:AAGBfm2HsX7qtkmyM7FyMmxG1iW3gzhOQg&amp;html=&amp;folt=rel">An Offline Deep Reinforcement Learning for Maintenance Decision-Making</a> (1)<a class="headerlink" href="#108-an-offline-deep-reinforcement-learning-for-maintenance-decision-making-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Khorasgani, H Wang, C Gupta, A Farahat - arXiv preprint arXiv:2109.15050, 2021</em> <br>
+Several machine learning and deep learning frameworks have been proposed to solve remaining useful life estimation and failure prediction problems in recent years. Having access to the remaining useful life estimation or likelihood of failure in near …</p>
+<h4 id="109-how-working-memory-and-reinforcement-learning-are-intertwined-a-cognitive-neural-and-computational-perspective-1">109. <a href="https://scholar.google.co.uk/scholar_url?url=https://psyarxiv.com/ebtn6/download%3Fformat%3Dpdf&amp;hl=en&amp;sa=X&amp;d=6671423932648237346&amp;ei=mHFcYYmIH4KNmwHokry4Dw&amp;scisig=AAGBfm20tWzI1o9a9hw4vLI_BRfuNSmf5g&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5758469387544328234:AAGBfm2HsX7qtkmyM7FyMmxG1iW3gzhOQg&amp;html=&amp;folt=rel">How working memory and reinforcement learning are intertwined: a cognitive, neural, and computational perspective</a> (1)<a class="headerlink" href="#109-how-working-memory-and-reinforcement-learning-are-intertwined-a-cognitive-neural-and-computational-perspective-1" title="Permanent link"></a></h4>
+<p><em>Authors: AH Yoo, A Collins - 2021</em> <br>
+Reinforcement learning and working memory are two core processes of human cognition, and are often considered cognitively, neuroscientifically, and algorithmically distinct. Here, we show that the brain networks that support them …</p>
+<h4 id="110-optimization-of-multilevel-inverters-using-novelty-driven-multi-verse-optimization-algorithm-1">110. <a href="https://scholar.google.fr/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9548192/&amp;hl=en&amp;sa=X&amp;d=826239791395385193&amp;ei=mHFcYcu2IsacywTBs6e4DQ&amp;scisig=AAGBfm2roQ7cV4ks8ys1TaOkrV66Hfr7Lg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7032476210231589458:AAGBfm0NfgjsZqBDtw-M4HvOeev8ahDuPg&amp;html=&amp;folt=rel">Optimization of Multilevel Inverters Using Novelty-driven Multi-verse Optimization Algorithm</a> (1)<a class="headerlink" href="#110-optimization-of-multilevel-inverters-using-novelty-driven-multi-verse-optimization-algorithm-1" title="Permanent link"></a></h4>
+<p><em>Authors: O Ceylan, M Neshat, S Mirjalili - 2021 56th International Universities Power …</em> <br>
+All over the world, renewable energy technologies which need power electronics based inverters in their designs are becoming more and more popular, thus detailed analysis to test the operational efficiency is required. This paper utilizes a new …</p>
+<h4 id="111-sim2real-learning-of-obstacle-avoidance-for-robotic-manipulators-in-uncertain-environments-1">111. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/9555228/&amp;hl=en&amp;sa=X&amp;d=13471283587340354659&amp;ei=mHFcYdL9Eo2oywTy66jAAQ&amp;scisig=AAGBfm1reuhIQ1WbHkmqV0wZhmGvySP4hg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:465881748428527529:AAGBfm3wwLhWk5WVTm4FMzFJBAkfBl36cQ&amp;html=&amp;folt=rel">Sim2Real Learning of Obstacle Avoidance for Robotic Manipulators in Uncertain Environments</a> (1)<a class="headerlink" href="#111-sim2real-learning-of-obstacle-avoidance-for-robotic-manipulators-in-uncertain-environments-1" title="Permanent link"></a></h4>
+<p><em>Authors: T Zhang, K Zhang, J Lin, WYG Louie, H Huang - IEEE Robotics and Automation …, 2021</em> <br>
+Obstacle avoidance for robotic manipulators can be challenging when they operate in unstructured environments. This problem is probed with the sim-to-real (sim2real) deep reinforcement learning, such that a moving policy of the robotic arm is learnt in …</p>
+<h4 id="112-vitruvion-a-generative-model-of-parametric-cad-sketches-1">112. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14124&amp;hl=en&amp;sa=X&amp;d=10041386464218470519&amp;ei=mXFcYay1DYihywTEyZ_QCg&amp;scisig=AAGBfm1jJtIgSAn8pxBzE0W3R5H7TqiaGA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16893544014717538225:AAGBfm2Lx68K3PqmoqxML2edSMMU91RQng&amp;html=&amp;folt=rel">Vitruvion: A Generative Model of Parametric CAD Sketches</a> (1)<a class="headerlink" href="#112-vitruvion-a-generative-model-of-parametric-cad-sketches-1" title="Permanent link"></a></h4>
+<p><em>Authors: A Seff, W Zhou, N Richardson, RP Adams - arXiv preprint arXiv:2109.14124, 2021</em> <br>
+Parametric computer-aided design (CAD) tools are the predominant way that engineers specify physical structures, from bicycle pedals to airplanes to printed circuit boards. The key characteristic of parametric CAD is that design intent is …</p>
+<h4 id="113-solving-inverse-problems-with-conditional-gan-prior-via-fast-network-projected-gradient-descent-1">113. <a href="https://scholar.google.com/scholar_url?url=https://ui.adsabs.harvard.edu/abs/2021arXiv210901105F/abstract&amp;hl=en&amp;sa=X&amp;d=4005699997829406585&amp;ei=mXFcYay1DYihywTEyZ_QCg&amp;scisig=AAGBfm0x7J8xvFm9Di_BWqeQTz5qp7ljlg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:16893544014717538225:AAGBfm2Lx68K3PqmoqxML2edSMMU91RQng&amp;html=&amp;folt=rel">Solving Inverse Problems with Conditional-GAN Prior via Fast Network-Projected Gradient Descent</a> (1)<a class="headerlink" href="#113-solving-inverse-problems-with-conditional-gan-prior-via-fast-network-projected-gradient-descent-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Fadli Damara, G Kornhardt, P Jung - arXiv e-prints, 2021</em> <br>
+The projected gradient descent (PGD) method has shown to be effective in recovering compressed signals described in a data-driven way by a generative model, ie, a generator which has learned the data distribution. Further reconstruction …</p>
+<h4 id="114-learning-perceptual-hallucination-for-multi-robot-navigation-in-narrow-hallways-1">114. <a href="https://scholar.google.com/scholar_url?url=https://www.cs.utexas.edu/~xiao/papers/phhp.pdf&amp;hl=en&amp;sa=X&amp;d=1596397025163424144&amp;ei=mHFcYb2bNMuNywSZgbWADg&amp;scisig=AAGBfm08aXwKzsjIO09UE7IDKzbgpXfn0Q&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:11280559324942125191:AAGBfm29fBcdrUC6UKv2SU_xuy_p-nxpdg&amp;html=&amp;folt=art">Learning Perceptual Hallucination for Multi-Robot Navigation in Narrow Hallways</a> (1)<a class="headerlink" href="#114-learning-perceptual-hallucination-for-multi-robot-navigation-in-narrow-hallways-1" title="Permanent link"></a></h4>
+<p><em>Authors: JS Park, X Xiao, G Warnell, H Yedidsion, P Stone</em> <br>
+While current systems for autonomous robot navigation can produce safe and efficient motion plans in static environments, they usually generate suboptimal behaviors when multiple robots must navigate together in confined spaces. For …</p>
+<h4 id="115-visually-adaptive-geometric-navigation-1">115. <a href="https://scholar.google.com/scholar_url?url=https://www.cs.utexas.edu/~xiao/papers/vagn.pdf&amp;hl=en&amp;sa=X&amp;d=3640121685009359510&amp;ei=mHFcYb2bNMuNywSZgbWADg&amp;scisig=AAGBfm19Ws36yYOBA97xMAbkkFFZ4-c7KA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:11280559324942125191:AAGBfm29fBcdrUC6UKv2SU_xuy_p-nxpdg&amp;html=&amp;folt=art">Visually Adaptive Geometric Navigation</a> (1)<a class="headerlink" href="#115-visually-adaptive-geometric-navigation-1" title="Permanent link"></a></h4>
+<p><em>Authors: S Ravi, S Satewar, G Wang, X Xiao, G Warnell…</em> <br>
+While classical navigation systems can move robots from one point to another in a geometrically collisionfree manner, recent approaches to visual navigation allow robots to reason beyond geometry and consider semantic information. However, the …</p>
+<h4 id="116-integrating-emotion-imitating-into-strategy-learning-improves-cooperation-in-social-dilemmas-with-extortion-1">116. <a href="https://scholar.google.com/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S0950705121008121&amp;hl=en&amp;sa=X&amp;d=8884337197648205471&amp;ei=mHFcYe7pIM6_mQHMm7boDg&amp;scisig=AAGBfm2ytlWR1fWAvAnFJA90PliWpG9TuA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:6466109163456983537:AAGBfm1ShsvT1DDDgXJFYOMY4YvAtzuNpQ&amp;html=&amp;folt=rel">Integrating emotion-imitating into strategy learning improves cooperation in social dilemmas with extortion</a> (1)<a class="headerlink" href="#116-integrating-emotion-imitating-into-strategy-learning-improves-cooperation-in-social-dilemmas-with-extortion-1" title="Permanent link"></a></h4>
+<p><em>Authors: J Quan, Y Zhou, X Ma, X Wang, JB Yang - Knowledge-Based Systems, 2021</em> <br>
+Extortion strategy can play the role of a Trojan horse for cooperators and act as a catalyst for the evolution of cooperation in social dilemma games. Based on the prisoner&rsquo;s dilemma game model with extortion, an emotion-imitating rule for strategy …</p>
+<h4 id="117-making-hyper-parameters-of-proximal-policy-optimization-robust-to-time-discretization-1">117. <a href="https://scholar.google.com/scholar_url?url=https://armahmood.github.io/files/FM_neurips_wrl2020.pdf&amp;hl=en&amp;sa=X&amp;d=12278811705887282856&amp;ei=mHFcYfm9FYihywTEyZ_QCg&amp;scisig=AAGBfm13jAiKY1GddYd-Ujzhp-N3PfcavA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:942002207151750780:AAGBfm354y2cW38IF4_kKp4qgExZPC4Low&amp;html=&amp;folt=rel">Making Hyper-parameters of Proximal Policy Optimization Robust to Time Discretization</a> (1)<a class="headerlink" href="#117-making-hyper-parameters-of-proximal-policy-optimization-robust-to-time-discretization-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Farrahi, AR Mahmood</em> <br>
+A small action cycle time can help reinforcement learning agents by granting them fast reaction and a more temporally detailed perception of the environment. The learning performance of both policy gradient and action value methods, however …</p>
+<h4 id="118-playing-doom-with-anticipator-a3c-based-agents-using-deep-reinforcement-learning-and-the-vizdoom-game-ai-research-platform-1">118. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-77939-9_15&amp;hl=en&amp;sa=X&amp;d=16833608039272066666&amp;ei=mXFcYe1XktLJBPiUmKAH&amp;scisig=AAGBfm18X85yXU-O2lbUTOIOGehf_kz7DQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">Playing Doom with Anticipator-A3C Based Agents Using Deep Reinforcement Learning and the ViZDoom Game-AI Research Platform</a> (1)<a class="headerlink" href="#118-playing-doom-with-anticipator-a3c-based-agents-using-deep-reinforcement-learning-and-the-vizdoom-game-ai-research-platform-1" title="Permanent link"></a></h4>
+<p><em>Authors: A Khan, M Naeem, AM Khattak, MZ Asghar, AH Malik - Deep Learning for Unmanned …, 2021</em> <br>
+The built-in game agents act according to the pre-written scripts and make decisions, take actions like they have been stated. They acquire and take advantage of unfair information, instead of acting flexibly like human players, who make decisions only …</p>
+<h4 id="119-smac3-a-versatile-bayesian-optimization-package-for-hyperparameter-optimization-1">119. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.09831&amp;hl=en&amp;sa=X&amp;d=9179192706573056075&amp;ei=mXFcYe1XktLJBPiUmKAH&amp;scisig=AAGBfm1_E66KQarx1qkRrulhcPqlLI6hrg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">SMAC3: A Versatile Bayesian Optimization Package for Hyperparameter Optimization</a> (1)<a class="headerlink" href="#119-smac3-a-versatile-bayesian-optimization-package-for-hyperparameter-optimization-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Lindauer, K Eggensperger, M Feurer, A Biedenkapp… - arXiv preprint arXiv …, 2021</em> <br>
+Algorithm parameters, in particular hyperparameters of machine learning algorithms, can substantially impact their performance. To support users in determining well-performing hyperparameter configurations for their algorithms, datasets and …</p>
+<h4 id="120-a-privacy-preserving-distributed-training-framework-for-cooperative-multi-agent-deep-reinforcement-learning-1">120. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14998&amp;hl=en&amp;sa=X&amp;d=1497262464101803868&amp;ei=mXFcYe1XktLJBPiUmKAH&amp;scisig=AAGBfm167aRYxYx_6fAnVNmErZ1c_FjAPA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">A Privacy-preserving Distributed Training Framework for Cooperative Multi-agent Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#120-a-privacy-preserving-distributed-training-framework-for-cooperative-multi-agent-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Shi - arXiv preprint arXiv:2109.14998, 2021</em> <br>
+Deep Reinforcement Learning (DRL) sometimes needs a large amount of data to converge in the training procedure and in some cases, each action of the agent may produce regret. This barrier naturally motivates different data sets or environment …</p>
+<h4 id="121-biologically-plausible-training-mechanisms-for-self-supervised-learning-in-deep-networks-1">121. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.15089&amp;hl=en&amp;sa=X&amp;d=15237148372199559362&amp;ei=mXFcYe1XktLJBPiUmKAH&amp;scisig=AAGBfm1j0IN8zLDx_PTK2ct5Mc0x2UxVYw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13298184080523634351:AAGBfm13o7k1L6C9-R4v7tcvgJdsKzL5cw&amp;html=&amp;folt=rel">Biologically Plausible Training Mechanisms for Self-Supervised Learning in Deep Networks</a> (1)<a class="headerlink" href="#121-biologically-plausible-training-mechanisms-for-self-supervised-learning-in-deep-networks-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Tang, Y Yang, Y Amit - arXiv preprint arXiv:2109.15089, 2021</em> <br>
+We develop biologically plausible training mechanisms for self-supervised learning (SSL) in deep networks. SSL, with a contrastive loss, is more natural as it does not require labelled data and its robustness to perturbations yields more adaptable …</p>
+<h4 id="122-towards-multi-agent-reinforcement-learning-using-quantum-boltzmann-machines-1">122. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.10900&amp;hl=en&amp;sa=X&amp;d=12002080130521093107&amp;ei=mHFcYcLGMoLemgHVs5GYDg&amp;scisig=AAGBfm3BMl0SLsUIzHy8bA57f49ck7tUjg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:11255622882119290773:AAGBfm2E9o1xWFGijDu3IrHvwnxx4lPrzQ&amp;html=&amp;folt=rel">Towards Multi-Agent Reinforcement Learning using Quantum Boltzmann Machines</a> (1)<a class="headerlink" href="#122-towards-multi-agent-reinforcement-learning-using-quantum-boltzmann-machines-1" title="Permanent link"></a></h4>
+<p><em>Authors: T Müller, C Roch, K Schmid, P Altmann - arXiv preprint arXiv:2109.10900, 2021</em> <br>
+Reinforcement learning has driven impressive advances in machine learning. Simultaneously, quantum-enhanced machine learning algorithms using quantum annealing underlie heavy developments. Recently, a multi-agent reinforcement …</p>
+<h4 id="123-anomaly-attribution-of-multivariate-time-series-using-counterfactual-reasoning-1">123. <a href="https://scholar.google.com/scholar_url?url=https://ui.adsabs.harvard.edu/abs/2021arXiv210906562T/abstract&amp;hl=en&amp;sa=X&amp;d=3667352347430647099&amp;ei=mHFcYcLGMoLemgHVs5GYDg&amp;scisig=AAGBfm3S6XsP4WIJZgMY-CJPdr9JDUTyrA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:11255622882119290773:AAGBfm2E9o1xWFGijDu3IrHvwnxx4lPrzQ&amp;html=&amp;folt=rel">Anomaly Attribution of Multivariate Time Series using Counterfactual Reasoning</a> (1)<a class="headerlink" href="#123-anomaly-attribution-of-multivariate-time-series-using-counterfactual-reasoning-1" title="Permanent link"></a></h4>
+<p><em>Authors: V Teodora Trifunov, M Shadaydeh, B Barz, J Denzler - arXiv e-prints, 2021</em> <br>
+There are numerous methods for detecting anomalies in time series, but that is only the first step to understanding them. We strive to exceed this by explaining those anomalies. Thus we develop a novel attribution scheme for multivariate time series …</p>
+<h4 id="124-wedge-web-image-assisted-domain-generalization-for-semantic-segmentation-1">124. <a href="https://scholar.google.co.th/scholar_url?url=https://arxiv.org/pdf/2109.14196&amp;hl=en&amp;sa=X&amp;d=3891017728889229070&amp;ei=mHFcYeXdENWR6rQPoZmruAk&amp;scisig=AAGBfm0-6XR3onXRUzYQU96Hc625vRyCTg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:25850099265593436:AAGBfm00MiDdt0osmHYjWmlP7UOvIyejVg&amp;html=&amp;folt=rel">WEDGE: Web-Image Assisted Domain Generalization for Semantic Segmentation</a> (1)<a class="headerlink" href="#124-wedge-web-image-assisted-domain-generalization-for-semantic-segmentation-1" title="Permanent link"></a></h4>
+<p><em>Authors: N Kim, T Son, C Lan, W Zeng, S Kwak - arXiv preprint arXiv:2109.14196, 2021</em> <br>
+Domain generalization for semantic segmentation is highly demanded in real applications, where a trained model is expected to work well in previously unseen domains. One challenge lies in the lack of data which could cover the diverse …</p>
+<h4 id="125-effects-of-sampling-and-prediction-horizon-in-reinforcement-learning-1">125. <a href="https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/iel7/6287639/9312710/09536718.pdf&amp;hl=en&amp;sa=X&amp;d=14178061420361036161&amp;ei=mHFcYYvKLoihywTEyZ_QCg&amp;scisig=AAGBfm2Y3lLbsvjL6P3Y4sy1jDA3B4nclg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:8115078626003881371:AAGBfm1za3W_0PPl6sLTw3-WlR9SymJBEA&amp;html=&amp;folt=rel">Effects of Sampling and Prediction Horizon in Reinforcement Learning</a> (1)<a class="headerlink" href="#125-effects-of-sampling-and-prediction-horizon-in-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: P Osinenko, D Dobriborsci - IEEE Access, 2021</em> <br>
+Plain reinforcement learning (RL) may be prone to loss of convergence, constraint violation, unexpected performance, etc. Commonly, RL agents undergo extensive learning stages to achieve acceptable functionality. This is in contrast to classical …</p>
+<h4 id="126-unified-data-collection-for-visual-inertial-calibration-via-deep-reinforcement-learning-1">126. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14974&amp;hl=en&amp;sa=X&amp;d=525924658627439276&amp;ei=mHFcYbHbJuOKywTUspQg&amp;scisig=AAGBfm3KcMBorT15FIWnLaHUNa7Nsbv_eg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7179431164517902851:AAGBfm1FBFMTtCuZByLmSms5k15XoBuIgg&amp;html=&amp;folt=rel">Unified Data Collection for Visual-Inertial Calibration via Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#126-unified-data-collection-for-visual-inertial-calibration-via-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Ao, L Chen, F Tschopp, M Breyer, A Cramariuc… - arXiv preprint arXiv …, 2021</em> <br>
+Visual-inertial sensors have a wide range of applications in robotics. However, good performance often requires different sophisticated motion routines to accurately calibrate camera intrinsics and inter-sensor extrinsics. This work presents a novel …</p>
+<h4 id="127-analysis-of-the-possibilities-for-using-machine-learning-algorithms-in-the-unity-environment-1">127. <a href="https://scholar.google.com/scholar_url?url=https://ph.pollub.pl/index.php/jcsi/article/download/2680/2482&amp;hl=en&amp;sa=X&amp;d=5022979954089500409&amp;ei=mHFcYcXEJJLSyQT4lJigBw&amp;scisig=AAGBfm0cX-I78uWvmuKEmRo2KhiSc55f3A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7075396416332708986:AAGBfm2ikwDLRO1om_kwNYRFfORapex4mg&amp;html=&amp;folt=rel">Analysis of the possibilities for using machine learning algorithms in the Unity environment</a> (1)<a class="headerlink" href="#127-analysis-of-the-possibilities-for-using-machine-learning-algorithms-in-the-unity-environment-1" title="Permanent link"></a></h4>
+<p><em>Authors: K Litwynenko, M Plechawska-Wójcik - Journal of Computer Sciences Institute, 2021</em> <br>
+Reinforcement learning algorithms are gaining popularity, and their advancement is made possible by the presence of tools to evaluate them. This paper concerns the applicability of machine learning algorithms on the Unity platform using the Unity ML …</p>
+<h4 id="128-independent-deep-deterministic-policy-gradient-reinforcement-learning-in-cooperative-multiagent-pursuit-games-1">128. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-86380-7_51&amp;hl=en&amp;sa=X&amp;d=10698438722137826447&amp;ei=mHFcYfqvMIfBmQGX-6OoBg&amp;scisig=AAGBfm3bngoDly7gBddrL0lYlOE3uROMzA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Independent Deep Deterministic Policy Gradient Reinforcement Learning in Cooperative Multiagent Pursuit Games</a> (1)<a class="headerlink" href="#128-independent-deep-deterministic-policy-gradient-reinforcement-learning-in-cooperative-multiagent-pursuit-games-1" title="Permanent link"></a></h4>
+<p><em>Authors: S Zhou, W Ren, X Ren, Y Wang, X Yi - International Conference on Artificial Neural …, 2021</em> <br>
+In this paper, we study a fully decentralized multi-agent pursuit problem in a non-communication environment. Fully decentralized (decentralized training and decentralized execution) has stronger robustness and scalability compared with …</p>
+<h4 id="129-learning-to-communicate-with-deep-multi-agent-reinforcement-learning-learning-to-communicate-with-deep-multi-agent-reinforcement-learning-1">129. <a href="https://scholar.google.com/scholar_url?url=https://blog.titanwolf.in/a%3FID%3D01150-87607d6d-af6e-4192-ac7f-3c826a0cceb1&amp;hl=en&amp;sa=X&amp;d=17738926510252758827&amp;ei=mHFcYfqvMIfBmQGX-6OoBg&amp;scisig=AAGBfm0w7nF3vmw6ZrVwl3i3AFb9dMGfMw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:9173239287530896649:AAGBfm35is91gsYOixQrPVvjDBLPb-9ClQ&amp;html=&amp;folt=rel">Learning to Communicate with Deep Multi-Agent Reinforcement Learning Learning to Communicate with Deep Multi-Agent Reinforcement Learning</a> (1)<a class="headerlink" href="#129-learning-to-communicate-with-deep-multi-agent-reinforcement-learning-learning-to-communicate-with-deep-multi-agent-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: T Wolf</em> <br>
+We consider the problem of multiple agents sensing and acting in environments with the goal of maximising their shared utility. In these environments, agents must learn communication protocols in order to share information that is needed to solve the …</p>
+<h4 id="130-explanation-aware-experience-replay-in-rule-dense-environments-1">130. <a href="https://scholar.google.ca/scholar_url?url=https://arxiv.org/pdf/2109.14711&amp;hl=en&amp;sa=X&amp;d=624888084389595130&amp;ei=mXFcYa6pA-OKywTUspQg&amp;scisig=AAGBfm3RpyaI0iXL1s_cNHQaRYvCCTreRg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:14133122478778202741:AAGBfm1TbM8fT85DqMruIm7EEKqdELizNw&amp;html=&amp;folt=rel">Explanation-Aware Experience Replay in Rule-Dense Environments</a> (1)<a class="headerlink" href="#130-explanation-aware-experience-replay-in-rule-dense-environments-1" title="Permanent link"></a></h4>
+<p><em>Authors: F Sovrano, A Raymond, A Prorok - arXiv preprint arXiv:2109.14711, 2021</em> <br>
+Human environments are often regulated by explicit and complex rulesets. Integrating Reinforcement Learning (RL) agents into such environments motivates the development of learning mechanisms that perform well in rule-dense and …</p>
+<h4 id="131-cooperative-task-offloading-and-block-mining-in-blockchain-based-edge-computing-with-multi-agent-deep-reinforcement-learning-1">131. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.14263&amp;hl=en&amp;sa=X&amp;d=8902899948342403274&amp;ei=mHFcYcytKdWR6rQPoZmruAk&amp;scisig=AAGBfm0XEJxBWq9Zrk0rZJi5FXOzs7H11A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7441630058540601614:AAGBfm3_v-UDacsLJJoJOy9br5zR5WUCTg&amp;html=&amp;folt=rel">Cooperative Task Offloading and Block Mining in Blockchain-based Edge Computing with Multi-agent Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#131-cooperative-task-offloading-and-block-mining-in-blockchain-based-edge-computing-with-multi-agent-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: DC Nguyen, M Ding, PN Pathirana, A Seneviratne, J Li… - arXiv preprint arXiv …, 2021</em> <br>
+The convergence of mobile edge computing (MEC) and blockchain is transforming the current computing services in mobile networks, by offering task offloading solutions with security enhancement empowered by blockchain mining …</p>
+<h4 id="132-hindsight-reward-tweaking-via-conditional-deep-reinforcement-learning-1">132. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.02332&amp;hl=en&amp;sa=X&amp;d=9425401251885278740&amp;ei=mHFcYcqsGoaP6rQP1_asgAM&amp;scisig=AAGBfm0juMgYV14fDba_XZDLQyj9O7mBDQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Hindsight Reward Tweaking via Conditional Deep Reinforcement Learning</a> (1)<a class="headerlink" href="#132-hindsight-reward-tweaking-via-conditional-deep-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: N Wei, J Liang, D Xie, S Pu - arXiv preprint arXiv:2109.02332, 2021</em> <br>
+Designing optimal reward functions has been desired but extremely difficult in reinforcement learning (RL). When it comes to modern complex tasks, sophisticated reward functions are widely used to simplify policy learning yet even a tiny …</p>
+<h4 id="133-translate-fill-improving-zero-shot-multilingual-semantic-parsing-with-synthetic-data-1">133. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04319&amp;hl=en&amp;sa=X&amp;d=13288956324407378497&amp;ei=mHFcYcqsGoaP6rQP1_asgAM&amp;scisig=AAGBfm2-KKEh3y1lajHBLxtxCjOpvy8WNQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Translate &amp; Fill: Improving Zero-Shot Multilingual Semantic Parsing with Synthetic Data</a> (1)<a class="headerlink" href="#133-translate-fill-improving-zero-shot-multilingual-semantic-parsing-with-synthetic-data-1" title="Permanent link"></a></h4>
+<p><em>Authors: M Nicosia, Z Qu, Y Altun - arXiv preprint arXiv:2109.04319, 2021</em> <br>
+While multilingual pretrained language models (LMs) fine-tuned on a single language have shown substantial cross-lingual task transfer capabilities, there is still a wide performance gap in semantic parsing tasks when target language supervision …</p>
+<h4 id="134-distributed-reinforcement-learning-with-self-play-in-parameterized-action-space-1">134. <a href="https://scholar.google.com/scholar_url?url=https://cgdsss.github.io/pdf/SMC21_0324_MS.pdf&amp;hl=en&amp;sa=X&amp;d=10932731660107693321&amp;ei=mHFcYcqsGoaP6rQP1_asgAM&amp;scisig=AAGBfm38rvyxJ3sUwwQuVeCtTALPqMP1Gw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Distributed Reinforcement Learning with Self-Play in Parameterized Action Space</a> (1)<a class="headerlink" href="#134-distributed-reinforcement-learning-with-self-play-in-parameterized-action-space-1" title="Permanent link"></a></h4>
+<p><em>Authors: J Ma, S Yao, G Chen, J Song, J Ji</em> <br>
+Self-play has been shown to be effective to provide a proper training curriculum for a reinforcement learning agent in competitive multi-agent environments without direct supervision. However, its performance is still unstable for problems with sparse …</p>
+<h4 id="135-videoclip-contrastive-pre-training-for-zero-shot-video-text-understanding-1">135. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14084&amp;hl=en&amp;sa=X&amp;d=5798607781779679015&amp;ei=mHFcYcqsGoaP6rQP1_asgAM&amp;scisig=AAGBfm0-BX6yuptPDJXYBDZRkevTN-B-9Q&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">VideoCLIP: Contrastive Pre-training for Zero-shot Video-Text Understanding</a> (1)<a class="headerlink" href="#135-videoclip-contrastive-pre-training-for-zero-shot-video-text-understanding-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Xu, G Ghosh, PY Huang, D Okhonko, A Aghajanyan… - arXiv preprint arXiv …, 2021</em> <br>
+We present VideoCLIP, a contrastive approach to pre-train a unified model for zero-shot video and text understanding, without using any labels on downstream tasks. VideoCLIP trains a transformer for video and text by contrasting temporally …</p>
+<h4 id="136-reinforcement-learning-and-monte-carlo-methods-1">136. <a href="https://scholar.google.com/scholar_url?url=https://nanjiang.cs.illinois.edu/files/cs542/note2_5.pdf&amp;hl=en&amp;sa=X&amp;d=6154326846615412824&amp;ei=mHFcYcqsGoaP6rQP1_asgAM&amp;scisig=AAGBfm0zRv6EzvBoxBOKQyhfH3j_hwu7Dw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Reinforcement Learning and Monte-Carlo Methods</a> (1)<a class="headerlink" href="#136-reinforcement-learning-and-monte-carlo-methods-1" title="Permanent link"></a></h4>
+<p><em>Authors: N Jiang - 2021</em> <br>
+In the previous note we considered policy evaluation and optimization when the full specification of the MDP is given, and the major challenge is computational. In the learning setting, the MDP specification, especially the transition function P and …</p>
+<h4 id="137-convergence-of-batch-asynchronous-stochastic-approximation-with-applications-to-reinforcement-learning-1">137. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.03445&amp;hl=en&amp;sa=X&amp;d=10466583098748289739&amp;ei=mHFcYcqsGoaP6rQP1_asgAM&amp;scisig=AAGBfm2ar5gPdpBjxG4NGZ7GfNREvSQ9og&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:4237047590178389108:AAGBfm3PQ1-AOfQz3Cp3BWXzl2qTmiokfw&amp;html=&amp;folt=rel">Convergence of Batch Asynchronous Stochastic Approximation With Applications to Reinforcement Learning</a> (1)<a class="headerlink" href="#137-convergence-of-batch-asynchronous-stochastic-approximation-with-applications-to-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: RL Karandikar, M Vidyasagar - arXiv preprint arXiv:2109.03445, 2021</em> <br>
+The stochastic approximation (SA) algorithm is a widely used probabilistic method for finding a solution to an equation of the form $\mathbf {f}(\boldsymbol {\theta})=\mathbf {0} $ where $\mathbf {f}:\mathbb {R}^ d\rightarrow\mathbb {R}^ d $, when only noisy …</p>
+<h4 id="138-latent-dynamics-for-artefact-free-character-animation-via-data-driven-reinforcement-learning-1">138. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-030-86380-7_55&amp;hl=en&amp;sa=X&amp;d=286396195432273712&amp;ei=mHFcYdLkOILQyQTB27FY&amp;scisig=AAGBfm0ho0FxnzdqVx0fCZrvsoJVD8-mKA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">Latent Dynamics for Artefact-Free Character Animation via Data-Driven Reinforcement Learning</a> (1)<a class="headerlink" href="#138-latent-dynamics-for-artefact-free-character-animation-via-data-driven-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: V Gamage, C Ennis, R Ross - International Conference on Artificial Neural Networks, 2021</em> <br>
+In the field of character animation, recent work has shown that data-driven reinforcement learning (RL) methods can address issues such as the difficulty of crafting reward functions, and train agents that can portray generalisable social …</p>
+<h4 id="139-wdibs-wasserstein-deterministic-information-bottleneck-for-state-abstraction-to-balance-state-compression-and-performance-1">139. <a href="https://scholar.google.com/scholar_url?url=https://link.springer.com/article/10.1007/s10489-021-02787-4&amp;hl=en&amp;sa=X&amp;d=1045113955768557195&amp;ei=mHFcYdLkOILQyQTB27FY&amp;scisig=AAGBfm2U5tmvSZxYUzFcoPnMBoy1npLzaw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12834785135001947598:AAGBfm0i3gDAN3u6ghxZgS1QnPRBrpJocg&amp;html=&amp;folt=rel">WDIBS: Wasserstein deterministic information bottleneck for state abstraction to balance state-compression and performance</a> (1)<a class="headerlink" href="#139-wdibs-wasserstein-deterministic-information-bottleneck-for-state-abstraction-to-balance-state-compression-and-performance-1" title="Permanent link"></a></h4>
+<p><em>Authors: X Zhu, T Huang, R Zhang, W Zhu - Applied Intelligence, 2021</em> <br>
+As an important branch of reinforcement learning, Apprenticeship learning studies how an agent learns good behavioral decisions by observing an expert policy from the environment. It has made many encouraging breakthroughs in real-world …</p>
+<h4 id="140-primal-dual-first-order-methods-for-affinely-constrained-multi-block-saddle-point-problems-1">140. <a href="https://scholar.google.co.th/scholar_url?url=https://arxiv.org/pdf/2109.14212&amp;hl=en&amp;sa=X&amp;d=17308209103134364573&amp;ei=mXFcYbWPB4nmmgGQla6wAw&amp;scisig=AAGBfm3R-OBm7tjgCTKdsRHwPV89oaDGVQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:15171112644264959764:AAGBfm3YYkhaY_KWDxOiSCVbyQL925EEHQ&amp;html=&amp;folt=rel">Primal-Dual First-Order Methods for Affinely Constrained Multi-Block Saddle Point Problems</a> (1)<a class="headerlink" href="#140-primal-dual-first-order-methods-for-affinely-constrained-multi-block-saddle-point-problems-1" title="Permanent link"></a></h4>
+<p><em>Authors: J Zhang, M Wang, M Hong, S Zhang - arXiv preprint arXiv:2109.14212, 2021</em> <br>
+We consider the convex-concave saddle point problem $\min_ {\mathbf {x}}\max_ {\mathbf {y}}\Phi (\mathbf {x},\mathbf {y}) $, where the decision variables $\mathbf {x} $ and/or $\mathbf {y} $ subject to a multi-block structure and affine coupling …</p>
+<h4 id="141-surveillance-evasion-through-bayesian-reinforcement-learning-1">141. <a href="https://scholar.google.co.uk/scholar_url?url=https://arxiv.org/pdf/2109.14811&amp;hl=en&amp;sa=X&amp;d=1351973849507932128&amp;ei=mXFcYZ-DBaPZsQKvo78o&amp;scisig=AAGBfm1_3aRDynZASQnhmyCwlSFfQcvnpQ&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:14388799627408197015:AAGBfm2bwN5EZ-b6P4TSNgzs5mwgFIbk5A&amp;html=&amp;folt=rel">Surveillance Evasion Through Bayesian Reinforcement Learning</a> (1)<a class="headerlink" href="#141-surveillance-evasion-through-bayesian-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: D Qi, D Bindel, A Vladimirsky - arXiv preprint arXiv:2109.14811, 2021</em> <br>
+We consider a 2D continuous path planning problem with a completely unknown intensity of random termination: an Evader is trying to escape a domain while minimizing the cumulative risk of detection (termination) by adversarial Observers …</p>
+<h4 id="142-topic-level-knowledge-sub-graphs-for-multi-turn-dialogue-generation-1">142. <a href="https://scholar.google.com/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S0950705121007619&amp;hl=en&amp;sa=X&amp;d=17437426452237693321&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm24h3U2yDFjhOPWW85Ytn5mMkPdIw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Topic-level knowledge sub-graphs for multi-turn dialogue generation</a> (1)<a class="headerlink" href="#142-topic-level-knowledge-sub-graphs-for-multi-turn-dialogue-generation-1" title="Permanent link"></a></h4>
+<p><em>Authors: J Li, Q Huang, Y Cai, Y Liu, M Fu, Q Li - Knowledge-Based Systems, 2021</em> <br>
+Previous multi-turn dialogue approaches based on global Knowledge Graphs (KGs) still suffer from generic, uncontrollable, and incoherent responses generation. Most of them neither consider the local topic-level semantic information of KGs nor …</p>
+<h4 id="143-thinking-clearly-talking-fast-concept-guided-non-autoregressive-generation-for-open-domain-dialogue-systems-1">143. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04084&amp;hl=en&amp;sa=X&amp;d=12062679698215239288&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm13t0sAd685QZAVZb5VW5sRGNcESA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Thinking Clearly, Talking Fast: Concept-Guided Non-Autoregressive Generation for Open-Domain Dialogue Systems</a> (1)<a class="headerlink" href="#143-thinking-clearly-talking-fast-concept-guided-non-autoregressive-generation-for-open-domain-dialogue-systems-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Zou, Z Liu, X Hu, Q Zhang - arXiv preprint arXiv:2109.04084, 2021</em> <br>
+Human dialogue contains evolving concepts, and speakers naturally associate multiple concepts to compose a response. However, current dialogue models with the seq2seq framework lack the ability to effectively manage concept transitions and …</p>
+<h4 id="144-bert-mbert-or-bibert-a-study-on-contextualized-embeddings-for-neural-machine-translation-1">144. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.04588&amp;hl=en&amp;sa=X&amp;d=12181745390191680668&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm1lofPd7vv7h8jS6mpfkFA7Ebkuhw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">BERT, mBERT, or BiBERT? A Study on Contextualized Embeddings for Neural Machine Translation</a> (1)<a class="headerlink" href="#144-bert-mbert-or-bibert-a-study-on-contextualized-embeddings-for-neural-machine-translation-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Xu, B Van Durme, K Murray - arXiv preprint arXiv:2109.04588, 2021</em> <br>
+The success of bidirectional encoders using masked language models, such as BERT, on numerous natural language processing tasks has prompted researchers to attempt to incorporate these pre-trained models into neural machine translation …</p>
+<h4 id="145-multi-task-pre-training-for-plug-and-play-task-oriented-dialogue-system-1">145. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14739&amp;hl=en&amp;sa=X&amp;d=9908876537688296457&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm0kAsvWoUAz4-d4mDAiUD1duIuEWA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Multi-Task Pre-Training for Plug-and-Play Task-Oriented Dialogue System</a> (1)<a class="headerlink" href="#145-multi-task-pre-training-for-plug-and-play-task-oriented-dialogue-system-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Su, L Shu, E Mansimov, A Gupta, D Cai, YA Lai… - arXiv preprint arXiv …, 2021</em> <br>
+Pre-trained language models have been recently shown to benefit task-oriented dialogue (TOD) systems. Despite their success, existing methods often formulate this task as a cascaded generation problem which can lead to error accumulation across …</p>
+<h4 id="146-posscore-a-simple-yet-effective-evaluation-of-conversational-search-with-part-of-speech-labelling-1">146. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.03039&amp;hl=en&amp;sa=X&amp;d=11197087461988284376&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm2jeSNMRDAdVURu7euT4G2mjZYERg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">POSSCORE: A Simple Yet Effective Evaluation of Conversational Search with Part of Speech Labelling</a> (1)<a class="headerlink" href="#146-posscore-a-simple-yet-effective-evaluation-of-conversational-search-with-part-of-speech-labelling-1" title="Permanent link"></a></h4>
+<p><em>Authors: Z Liu, K Zhou, J Mao, ML Wilson - arXiv preprint arXiv:2109.03039, 2021</em> <br>
+Conversational search systems, such as Google Assistant and Microsoft Cortana, provide a new search paradigm where users are allowed, via natural language dialogues, to communicate with search systems. Evaluating such systems is very …</p>
+<h4 id="147-towards-a-visual-language-using-neural-networks-1">147. <a href="https://scholar.google.com/scholar_url?url=https://cdv.dei.uc.pt/wp-content/uploads/2021/09/goncalo2021visual.pdf&amp;hl=en&amp;sa=X&amp;d=6385432981666787184&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm1_5lPujsQDwwnDQr_iBNYrtjYnCg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Towards a Visual Language Using Neural Networks</a> (1)<a class="headerlink" href="#147-towards-a-visual-language-using-neural-networks-1" title="Permanent link"></a></h4>
+<p><em>Authors: L Gonçalo, JM Cunha, P Machado</em> <br>
+In recent years computer simulations have proven to be useful in the study of the origin and evolution of communication. In this paper, we present a system that is able to evolve image-based communication protocols to transmit information. We trained …</p>
+<h4 id="148-inducing-transformers-compositional-generalization-ability-via-auxiliary-sequence-prediction-tasks-1">148. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.15256&amp;hl=en&amp;sa=X&amp;d=16309095383325325481&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm0U7eQDtrADOax47AebK4lIHpO48Q&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">Inducing Transformer&rsquo;s Compositional Generalization Ability via Auxiliary Sequence Prediction Tasks</a> (1)<a class="headerlink" href="#148-inducing-transformers-compositional-generalization-ability-via-auxiliary-sequence-prediction-tasks-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Jiang, M Bansal - arXiv preprint arXiv:2109.15256, 2021</em> <br>
+Systematic compositionality is an essential mechanism in human language, allowing the recombination of known parts to create novel expressions. However, existing neural models have been shown to lack this basic ability in learning symbolic …</p>
+<h4 id="149-topicrefine-joint-topic-prediction-and-dialogue-response-generation-for-multi-turn-end-to-end-dialogue-system-1">149. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.05187&amp;hl=en&amp;sa=X&amp;d=220902802960272493&amp;ei=mHFcYav4HILQyQTB27FY&amp;scisig=AAGBfm1f2JS36NRYiNyTajPQFdBji0V0Pw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:5348633850937173455:AAGBfm3CVDkB8YYnyZWsVY9OvKDajdcgNg&amp;html=&amp;folt=rel">TopicRefine: Joint Topic Prediction and Dialogue Response Generation for Multi-turn End-to-End Dialogue System</a> (1)<a class="headerlink" href="#149-topicrefine-joint-topic-prediction-and-dialogue-response-generation-for-multi-turn-end-to-end-dialogue-system-1" title="Permanent link"></a></h4>
+<p><em>Authors: H Wang, M Cui, Z Zhou, GPC Fung, KF Wong - arXiv preprint arXiv:2109.05187, 2021</em> <br>
+A multi-turn dialogue always follows a specific topic thread, and topic shift at the discourse level occurs naturally as the conversation progresses, necessitating the model&rsquo;s ability to capture different topics and generate topic-aware responses …</p>
+<h4 id="150-formalizing-the-generalization-forgetting-trade-off-in-continual-learning-1">150. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14035&amp;hl=en&amp;sa=X&amp;d=11503317504038579116&amp;ei=mHFcYd6jO8acywTBs6e4DQ&amp;scisig=AAGBfm1HoD9nQgZmBsnlMTp4-6Zc0KSLUw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:13060635852841082830:AAGBfm3aiLDU76Wd6N49R8NmhIYpKIEt-Q&amp;html=&amp;folt=rel">Formalizing the Generalization-Forgetting Trade-off in Continual Learning</a> (1)<a class="headerlink" href="#150-formalizing-the-generalization-forgetting-trade-off-in-continual-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: K Raghavan, P Balaprakash - arXiv preprint arXiv:2109.14035, 2021</em> <br>
+We formulate the continual learning (CL) problem via dynamic programming and model the trade-off between catastrophic forgetting and generalization as a two-player sequential game. In this approach, player 1 maximizes the cost due to lack of …</p>
+<h4 id="151-gaussian-belief-space-path-planning-for-minimum-sensing-navigation-1">151. <a href="https://scholar.google.co.th/scholar_url?url=https://arxiv.org/pdf/2109.13976&amp;hl=en&amp;sa=X&amp;d=16387953174822478123&amp;ei=mHFcYeD4K42oywTy66jAAQ&amp;scisig=AAGBfm0jZDx8zrvksMti38M1UIzyw78Zag&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:7760063636988435610:AAGBfm38uzFg17Bo7O74k1Ku-6ndOzK3EA&amp;html=&amp;folt=rel">Gaussian Belief Space Path Planning for Minimum Sensing Navigation</a> (1)<a class="headerlink" href="#151-gaussian-belief-space-path-planning-for-minimum-sensing-navigation-1" title="Permanent link"></a></h4>
+<p><em>Authors: AR Pedram, R Funada, T Tanaka - arXiv preprint arXiv:2109.13976, 2021</em> <br>
+We propose a path planning methodology for a mobile robot navigating through an obstacle-filled environment to generate a reference path that is traceable with moderate sensing efforts. The desired reference path is characterized as the shortest …</p>
+<h4 id="152-model-based-motion-imitation-for-agile-diverse-and-generalizable-quadupedal-locomotion-1">152. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.13362&amp;hl=en&amp;sa=X&amp;d=13453523694506545564&amp;ei=mHFcYb_GNoaP6rQP1_asgAM&amp;scisig=AAGBfm0nfVAkjJ1iS88qud8ZG7pj5Evqhw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12129537905387702957:AAGBfm0Vo9yPXkpMiwin89_VZR4QGFWp6g&amp;html=&amp;folt=rel">Model-based Motion Imitation for Agile, Diverse and Generalizable Quadupedal Locomotion</a> (1)<a class="headerlink" href="#152-model-based-motion-imitation-for-agile-diverse-and-generalizable-quadupedal-locomotion-1" title="Permanent link"></a></h4>
+<p><em>Authors: T Li, J Won, S Ha, A Rai - arXiv preprint arXiv:2109.13362, 2021</em> <br>
+Robots operating in human environments need a variety of skills, like slow and fast walking, turning, and side-stepping. However, building robot controllers that can exhibit such a large range of behaviors is challenging, and unsolved. We present an …</p>
+<h4 id="153-trajectotree-trajectory-optimization-meets-tree-search-for-planning-multi-contact-dexterous-manipulation-1">153. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.14088&amp;hl=en&amp;sa=X&amp;d=11064824986029098608&amp;ei=mHFcYb_GNoaP6rQP1_asgAM&amp;scisig=AAGBfm2qdk7fRZqH8a6XQiNCiRv8FWM4lg&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12129537905387702957:AAGBfm0Vo9yPXkpMiwin89_VZR4QGFWp6g&amp;html=&amp;folt=rel">TrajectoTree: Trajectory Optimization Meets Tree Search for Planning Multi-contact Dexterous Manipulation</a> (1)<a class="headerlink" href="#153-trajectotree-trajectory-optimization-meets-tree-search-for-planning-multi-contact-dexterous-manipulation-1" title="Permanent link"></a></h4>
+<p><em>Authors: C Chen, P Culbertson, M Lepert, M Schwager, J Bohg - arXiv preprint arXiv …, 2021</em> <br>
+Dexterous manipulation tasks often require contact switching, where fingers make and break contact with the object. We propose a method that plans trajectories for dexterous manipulation tasks involving contact switching using contact-implicit …</p>
+<h4 id="154-vibration-improves-performance-in-granular-jamming-grippers-1">154. <a href="https://scholar.google.com/scholar_url?url=https://arxiv.org/pdf/2109.10496&amp;hl=en&amp;sa=X&amp;d=1745912038193015394&amp;ei=mHFcYb_GNoaP6rQP1_asgAM&amp;scisig=AAGBfm3lUZdEOusgS3zcJswtMe3zhBR0-Q&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:12129537905387702957:AAGBfm0Vo9yPXkpMiwin89_VZR4QGFWp6g&amp;html=&amp;folt=rel">Vibration Improves Performance in Granular Jamming Grippers</a> (1)<a class="headerlink" href="#154-vibration-improves-performance-in-granular-jamming-grippers-1" title="Permanent link"></a></h4>
+<p><em>Authors: R Mishra, T Philips, GW Delaney, D Howard - arXiv preprint arXiv:2109.10496, 2021</em> <br>
+Granular jamming is a popular soft robotics technology that has seen recent widespread applications including industrial gripping, surgical robotics and haptics. However, to date the field has not fully exploited the fundamental science of the …</p>
+<h4 id="155-online-robust-reinforcement-learning-with-model-uncertainty-1">155. <a href="https://scholar.google.co.in/scholar_url?url=https://arxiv.org/pdf/2109.14523&amp;hl=en&amp;sa=X&amp;d=16784754708250825281&amp;ei=mXFcYd72BYu4mAGqg5LoDg&amp;scisig=AAGBfm1bEHUnlZUwGLcnRJi70mfkhDVz8A&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:14565562134169474396:AAGBfm39hgJdm_pR5ngxvCckS5694mOkbQ&amp;html=&amp;folt=rel">Online Robust Reinforcement Learning with Model Uncertainty</a> (1)<a class="headerlink" href="#155-online-robust-reinforcement-learning-with-model-uncertainty-1" title="Permanent link"></a></h4>
+<p><em>Authors: Y Wang, S Zou - arXiv preprint arXiv:2109.14523, 2021</em> <br>
+Robust reinforcement learning (RL) is to find a policy that optimizes the worst-case performance over an uncertainty set of MDPs. In this paper, we focus on model-free robust RL, where the uncertainty set is defined to be centering at a misspecified MDP …</p>
+<h4 id="156-modeling-interactions-of-autonomous-vehicles-and-pedestrians-with-deep-multi-agent-reinforcement-learning-for-collision-avoidance-1">156. <a href="https://scholar.google.co.in/scholar_url?url=https://arxiv.org/pdf/2109.15266&amp;hl=en&amp;sa=X&amp;d=448449409401593112&amp;ei=mXFcYd72BYu4mAGqg5LoDg&amp;scisig=AAGBfm1zwYKAQj4QaoUndxTh0Pq8fWH6iA&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:14565562134169474396:AAGBfm39hgJdm_pR5ngxvCckS5694mOkbQ&amp;html=&amp;folt=rel">Modeling Interactions of Autonomous Vehicles and Pedestrians with Deep Multi-Agent Reinforcement Learning for Collision Avoidance</a> (1)<a class="headerlink" href="#156-modeling-interactions-of-autonomous-vehicles-and-pedestrians-with-deep-multi-agent-reinforcement-learning-for-collision-avoidance-1" title="Permanent link"></a></h4>
+<p><em>Authors: R Trumpp, H Bayerlein, D Gesbert - arXiv preprint arXiv:2109.15266, 2021</em> <br>
+Reliable pedestrian crash avoidance mitigation (PCAM) systems are crucial components of safe autonomous vehicles (AVs). The sequential nature of the vehicle-pedestrian interaction, ie, where immediate decisions of one agent directly influence …</p>
+<h4 id="157-the-research-on-intelligent-cooperative-combat-of-uav-cluster-with-multi-agent-reinforcement-learning-1">157. <a href="https://scholar.google.co.in/scholar_url?url=https://link.springer.com/article/10.1007/s42401-021-00105-x&amp;hl=en&amp;sa=X&amp;d=12239486410224407941&amp;ei=mXFcYd72BYu4mAGqg5LoDg&amp;scisig=AAGBfm3Sa4rhNIcJQVd1DKqEpzNcfpxwjw&amp;oi=scholaralrt&amp;hist=CWICN9UAAAAJ:14565562134169474396:AAGBfm39hgJdm_pR5ngxvCckS5694mOkbQ&amp;html=&amp;folt=rel">The research on intelligent cooperative combat of UAV cluster with multi-agent reinforcement learning</a> (1)<a class="headerlink" href="#157-the-research-on-intelligent-cooperative-combat-of-uav-cluster-with-multi-agent-reinforcement-learning-1" title="Permanent link"></a></h4>
+<p><em>Authors: D Xu, G Chen - Aerospace Systems, 2021</em> <br>
+With the rapid development of computer hardware and intelligent technology, the intelligent combat of unmanned aerial vehicle (UAV) cluster will become the main battle mode in the future battlefield. The UAV cluster as a multi-agent system (MAS) …</p></article></body></html>
