@@ -1,7 +1,10 @@
+#!/usr/bin/env python
 from __future__ import print_function
 import os.path
 import base64
 from collections import Counter
+from itertools import zip_longest
+import re
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -17,7 +20,7 @@ def create_md(paper_list, counter):
     with open('output.md','w') as f:
         f.write('# Google Scholar Alerts\n')
         for i, p in enumerate(paper_list):
-            f.write(f'#### {i}. [{p["title"]}]({p["link"]}) ({counter[p["title"]]})\n')
+            f.write(f'#### {i+1}. [{p["title"]}]({p["link"]}) ({counter[p["title"]]})\n')
             f.write(f'*Authors: {p["authors"]}* <br>\n')
             f.write(f'{p["snippet"]}\n')
             f.write('\n')
@@ -55,15 +58,16 @@ def main():
     for m in tqdm(l):
         msg = service.users().messages().get(userId='me',id=m['id']).execute()
         html = BeautifulSoup(base64.urlsafe_b64decode(msg['payload']['body']['data']).decode('utf-8'),features="html.parser")
-        paper = html.find_all('h3')
-        auth = html.find_all(attrs={'style':'color:#006621'})
-        snip = html.find_all(attrs={'class':'gse_alrt_sni'})
+        paper = html.find_all(class_=re.compile('gse_alrt_title'))
+        auth = html.find_all(style=re.compile('#006621'))
+        snip = html.find_all(class_=re.compile('gse_alrt_sni'))
 
-        for (p,a,s) in zip(paper,auth,snip):
-            counter[p.a.string] += 1
-            if counter[p.a.string]>1:
+        for (p,a,s) in zip_longest(paper,auth,snip):
+
+            counter[p.string] += 1
+            if counter[p.string]>1:
                 continue
-            d = {'title':p.a.string, 'link':p.a.get("href"), 'authors':a.string,
+            d = {'title':p.string, 'link':p.get("href"), 'authors':a.string,
                 'snippet':s.get_text()}
             out.append(d)
 
