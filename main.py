@@ -63,12 +63,11 @@ def main():
         snip = html.find_all(class_=re.compile('gse_alrt_sni'))
 
         for (p,a,s) in zip_longest(paper,auth,snip):
-
             counter[p.string] += 1
             if counter[p.string]>1:
                 continue
             d = {'title':p.string, 'link':p.get("href"), 'authors':a.string,
-                'snippet':s.get_text()}
+                'snippet':s.get_text() if s is not None else ''}
             out.append(d)
 
     out = sorted(out, key=lambda x:counter[x['title']], reverse=True)
