@@ -25,7 +25,7 @@ def create_md(paper_list, counter):
             f.write(f'{p["snippet"]}\n')
             f.write('\n')
 
-def main():
+def main(console=False):
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
     """
@@ -42,7 +42,13 @@ def main():
         # else:
         flow = InstalledAppFlow.from_client_secrets_file(
             'credentials.json', SCOPES)
-        creds = flow.run_local_server(port=0)
+        # creds = flow.run_local_server(port=0)
+        if console:
+            print('Using console mode...')
+            creds = flow.run_console()
+        else:
+            print('Using browser mode...')
+            creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
@@ -74,4 +80,8 @@ def main():
     create_md(out, counter)
 
 if __name__ == '__main__':
+    import sys
+    # use -console for console auth mode (for remote client)
+    console = '-console' in sys.argv 
     main()
+
