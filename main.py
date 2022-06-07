@@ -55,26 +55,35 @@ def main(console=False):
 
     service = build('gmail', 'v1', credentials=creds)
 
-    l = service.users().messages().list(userId='me',
-                                        q='from:scholaralerts-noreply@google.com',
-                                        labelIds=['INBOX'],
-                                        maxResults=500).execute().get('messages',[])
+    pageToken = None
     counter = Counter()
     out = []
-    for m in tqdm(l):
-        msg = service.users().messages().get(userId='me',id=m['id']).execute()
-        html = BeautifulSoup(base64.urlsafe_b64decode(msg['payload']['body']['data']).decode('utf-8'),features="html.parser")
-        paper = html.find_all(class_=re.compile('gse_alrt_title'))
-        auth = html.find_all(style=re.compile('#006621'))
-        snip = html.find_all(class_=re.compile('gse_alrt_sni'))
+    while True:
+        res = service.users().messages().list(userId='me',
+                                            q='from:scholaralerts-noreply@google.com',
+                                            labelIds=['INBOX'],
+                                            maxResults=500,
+                                            pageToken=pageToken).execute()
+        print(f'Extimated ramaining mails: {res["resultSizeEstimate"]}')
+        id_list = res['messages']
+        for m in tqdm(id_list):
+            msg = service.users().messages().get(userId='me',id=m['id']).execute()
+            html = BeautifulSoup(base64.urlsafe_b64decode(msg['payload']['body']['data']).decode('utf-8'),features="html.parser")
+            paper = html.find_all(class_=re.compile('gse_alrt_title'))
+            auth = html.find_all(style=re.compile('#006621'))
+            snip = html.find_all(class_=re.compile('gse_alrt_sni'))
 
-        for (p,a,s) in zip_longest(paper,auth,snip):
-            counter[p.string] += 1
-            if counter[p.string]>1:
-                continue
-            d = {'title':p.string, 'link':p.get("href"), 'authors':a.string,
-                'snippet':s.get_text() if s is not None else ''}
-            out.append(d)
+            for (p,a,s) in zip_longest(paper,auth,snip):
+                counter[p.string] += 1
+                if counter[p.string]>1:
+                    continue
+                d = {'title':p.string, 'link':p.get("href"), 'authors':a.string,
+                    'snippet':s.get_text() if s is not None else ''}
+                out.append(d)
+
+        if 'nextPageToken' not in res:
+            break
+        pageToken = res['nextPageToken']
 
     out = sorted(out, key=lambda x:counter[x['title']], reverse=True)
     create_md(out, counter)
@@ -83,5 +92,5 @@ if __name__ == '__main__':
     import sys
     # use -console for console auth mode (for remote client)
     console = '-console' in sys.argv 
-    main()
+    main(console)
 
