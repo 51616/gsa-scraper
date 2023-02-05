@@ -5,6 +5,7 @@ import base64
 from collections import Counter
 from itertools import zip_longest
 import re
+import logging
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -14,7 +15,10 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
+SCOPES = ['https://www.googleapis.com/auth/gmail.readonly', 'https://www.googleapis.com/auth/gmail.modify']
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
 
 def create_md(paper_list, counter):
     with open('output.md','w') as f:
@@ -33,25 +37,24 @@ def main(console=False):
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    # if os.path.exists('token.json'):
+    #     creds = Credentials.from_authorized_user_file('token.json', SCOPES)
     # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
+    # if not creds or not creds.valid:
         # if creds and creds.expired and creds.refresh_token:
         #     creds.refresh(Request())
         # else:
-        flow = InstalledAppFlow.from_client_secrets_file(
+    flow = InstalledAppFlow.from_client_secrets_file(
             'credentials.json', SCOPES)
-        # creds = flow.run_local_server(port=0)
-        if console:
-            print('Using console mode...')
-            creds = flow.run_console()
-        else:
-            print('Using browser mode...')
-            creds = flow.run_local_server(port=0)
+    if console:
+        print('Using console mode...')
+        creds = flow.run_console()
+    else:
+        print('Using browser mode...')
+        creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('token.json', 'w') as token:
-            token.write(creds.to_json())
+    with open('token.json', 'w') as token:
+        token.write(creds.to_json())
 
     service = build('gmail', 'v1', credentials=creds)
 
@@ -68,7 +71,11 @@ def main(console=False):
         id_list = res['messages']
         for m in tqdm(id_list):
             msg = service.users().messages().get(userId='me',id=m['id']).execute()
-            html = BeautifulSoup(base64.urlsafe_b64decode(msg['payload']['body']['data']).decode('utf-8'),features="html.parser")
+            try:
+                html = BeautifulSoup(base64.urlsafe_b64decode(msg['payload']['body']['data']).decode('utf-8'),features="html.parser")
+            except KeyError:
+                continue
+            # html = BeautifulSoup(base64.urlsafe_b64decode(msg['payload']['body']['data']).decode('utf-8'),features="html.parser")
             paper = html.find_all(class_=re.compile('gse_alrt_title'))
             auth = html.find_all(style=re.compile('#006621'))
             snip = html.find_all(class_=re.compile('gse_alrt_sni'))
@@ -80,6 +87,7 @@ def main(console=False):
                 d = {'title':p.string, 'link':p.get("href"), 'authors':a.string,
                     'snippet':s.get_text() if s is not None else ''}
                 out.append(d)
+            service.users().messages().trash(userId='me',id=m['id']).execute()
 
         if 'nextPageToken' not in res:
             break
